@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.1;net8.0;net10.0</TargetFrameworks>
+        
+        <LangVersion>latest</LangVersion>
+        
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <PackageId>Bootstrap.Avalonia.Toolkit</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Saiah Albert</Authors>
+        <Description>Bootstrap-inspired utility classes and theme for Avalonia UI.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.3.0"/>
+        <PackageReference Include="Avalonia.BuildServices" Version="11.3.0" PrivateAssets="all"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <AvaloniaResource Include="**\*.axaml"/>
+    </ItemGroup>
+    
+
+</Project>

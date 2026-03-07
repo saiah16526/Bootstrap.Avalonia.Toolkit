@@ -1,0 +1,45 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<SolidColorBrush x:Key="BsBlue" Color="#0d6efd" />
+	<SolidColorBrush x:Key="BsIndigo" Color="#6610f2" />
+	<SolidColorBrush x:Key="BsPurple" Color="#6f42c1" />
+	<SolidColorBrush x:Key="BsPink" Color="#d63384" />
+	<SolidColorBrush x:Key="BsRed" Color="#dc3545" />
+	<SolidColorBrush x:Key="BsOrange" Color="#fd7e14" />
+	<SolidColorBrush x:Key="BsYellow" Color="#ffc107" />
+	<SolidColorBrush x:Key="BsGreen" Color="#198754" />
+	<SolidColorBrush x:Key="BsTeal" Color="#20c997" />
+	<SolidColorBrush x:Key="BsCyan" Color="#0dcaf0" />
+
+	<SolidColorBrush x:Key="BsBlack" Color="#000000" />
+	<SolidColorBrush x:Key="BsWhite" Color="#ffffff" />
+	<SolidColorBrush x:Key="BsGray" Color="#6c757d" />
+	<SolidColorBrush x:Key="BsGrayDark" Color="#343a40" />
+
+	<SolidColorBrush x:Key="BsGray100" Color="#f8f9fa" />
+	<SolidColorBrush x:Key="BsGray200" Color="#e9ecef" />
+	<SolidColorBrush x:Key="BsGray300" Color="#dee2e6" />
+	<SolidColorBrush x:Key="BsGray400" Color="#ced4da" />
+	<SolidColorBrush x:Key="BsGray500" Color="#adb5bd" />
+	<SolidColorBrush x:Key="BsGray600" Color="#6c757d" />
+	<SolidColorBrush x:Key="BsGray700" Color="#495057" />
+	<SolidColorBrush x:Key="BsGray800" Color="#343a40" />
+	<SolidColorBrush x:Key="BsGray900" Color="#212529" />
+
+	<FontFamily x:Key="BsFontSansSerif">system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif</FontFamily>
+	<FontFamily x:Key="BsFontMonospace">SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace</FontFamily>
+
+	<!-- Defines the standard body font size (14px). 
+     This is treated as 1rem and used as the multiplier for all rem-based sizes in the app. -->
+	<x:Double x:Key="BodyFontSize">14</x:Double>
+	<FontWeight x:Key="BodyFontWeight">Normal</FontWeight>
+
+	<CornerRadius x:Key="BsCornerRadiusDefault">5.25</CornerRadius>
+	<CornerRadius x:Key="BsCornerRadiusSm">3.5</CornerRadius>
+	<CornerRadius x:Key="BsCornerRadiusLg">7</CornerRadius>
+	<CornerRadius x:Key="BsCornerRadiusXl">14</CornerRadius>
+	<CornerRadius x:Key="BsCornerRadiusXxl">28</CornerRadius>
+	<CornerRadius x:Key="BsCornerRadiusPill">700</CornerRadius>
+
+</ResourceDictionary>
