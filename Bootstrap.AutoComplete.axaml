@@ -1,0 +1,27 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style
+		Selector="Control.m-0.mt-0.mb-0.ms-0.me-0.mx-0.my-0.m-1.mt-1.mb-1.ms-1.me-1.mx-1.my-1.m-2.mt-2.mb-2.ms-2.me-2.mx-2.my-2.m-3.mt-3.mb-3.ms-3.me-3.mx-3.my-3.m-4.mt-4.mb-4.ms-4.me-4.mx-4.my-4.m-5.mt-5.mb-5.ms-5.me-5.mx-5.my-5" />
+	<Style
+		Selector="Control.p-0.pt-0.pb-0.ps-0.pe-0.px-0.py-0.p-1.pt-1.pb-1.ps-1.pe-1.px-1.py-1.p-2.pt-2.pb-2.ps-2.pe-2.px-2.py-2.p-3.pt-3.pb-3.ps-3.pe-3.px-3.py-3.p-4.pt-4.pb-4.ps-4.pe-4.px-4.py-4.p-5.pt-5.pb-5.ps-5.pe-5.px-5.py-5" />
+	<Style
+		Selector="Control.h1.h2.h3.h4.h5.h6.display-1.display-2.display-3.display-4.display-5.display-6.lead.p.strong.small.mark.sub.sup" />
+	<Style
+		Selector="Control.btn.a.btn-primary.btn-secondary.btn-success.btn-info.btn-warning.btn-danger.btn-light.btn-dark.btn-outline-primary.btn-outline-secondary" />
+	<Style
+		Selector="Control.form-label.form-text.form-control.form-control-sm.form-control-lg.form-select.form-check-input.form-switch.form-range.form-floating.textarea" />
+	<Style Selector="Control.input-group.input-group-text.input-group-sm.input-group-lg" />
+	<Style Selector="Control.body.container.container-fluid.hr.blockquote.blockquote-footer.figure.figure-caption" />
+	<Style Selector="Control.code.pre.kbd.img-fluid.img-thumbnail" />
+	<Style Selector="Control.fade .show .collapse .collapsing .collapse-horizontal .visible .invisible" />
+	<Style Selector="Control.card .card-header .card-body .card-title .card-subtitle .card-text .card-footer" />
+	<Style
+		Selector="Control.text-bg-primary .text-bg-secondary .text-bg-success .text-bg-info .text-bg-warning .text-bg-danger .text-bg-light .text-bg-dark .bg-body .bg-primary .bg-secondary .bg-success .bg-info .bg-warning .bg-danger .bg-light .bg-dark .bg-black .bg-white .bg-transparent .bg-primary-subtle .bg-success-subtle .bg-danger-subtle .bg-warning-subtle .bg-info-subtle .bg-dark-subtle" />
+	<Style
+		Selector="Control.link-primary .link-secondary .link-success .link-info .link-warning .link-danger .link-light .link-dark .text-truncate .font-monospace .fs-1 .fs-2 .fs-3 .fs-4 .fs-5 .fs-6 .fst-italic .fst-normal .fw-light .fw-normal .fw-medium .fw-semibold .fw-bold .lh-1 .lh-sm .lh-base .lh-lg .text-decoration-none .text-decoration-underline .text-decoration-line-through .text-wrap .text-nowrap .text-break .text-primary .text-secondary .text-muted .text-body-secondary .text-success .text-info .text-warning .text-danger .text-light .text-dark .text-black .text-white .text-black-50 .text-white-50 .text-primary-emphasis .text-success-emphasis .text-danger-emphasis" />
+	<Style
+		Selector="Control.align-top .align-middle .align-bottom .align-stretch .opacity-0 .opacity-25 .opacity-50 .opacity-75 .opacity-100 .overflow-auto .overflow-hidden .overflow-scroll .overflow-x-auto .overflow-x-hidden .overflow-x-scroll .overflow-y-auto .overflow-y-hidden .overflow-y-scroll .z-n1 .z-0 .z-1 .z-2 .z-3" />
+
+
+</Styles>
