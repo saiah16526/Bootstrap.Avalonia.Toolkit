@@ -1,5 +1,5 @@
 
-# 🚀 Avalonia.Bootstrap
+# 🚀 Bootstrap.Avalonia.ToolKit
 
 **Build beautiful Avalonia UIs faster.** A lightweight, class-based styling system inspired by Bootstrap, designed specifically for modern Avalonia applications.
 
