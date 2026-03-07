@@ -1,6 +1,88 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+	<Styles.Resources>
+
+
+	<!-- Base Colors -->
+	<Color x:Key="PrimaryRgb">#0D6EFD</Color>
+	<Color x:Key="SecondaryRgb">#6C757D</Color>
+	<Color x:Key="SuccessRgb">#198754</Color>
+	<Color x:Key="InfoRgb">#0DCAF0</Color>
+	<Color x:Key="WarningRgb">#FFC107</Color>
+	<Color x:Key="DangerRgb">#DC3545</Color>
+	<Color x:Key="LightRgb">#212529</Color> <!-- swapped -->
+	<Color x:Key="DarkRgb">#F8F9FA</Color> <!-- swapped -->
+	<Color x:Key="WhiteRgb">#FFFFFF</Color>
+	<Color x:Key="BlackRgb">#000000</Color>
+
+	<!-- Brushes -->
+	<SolidColorBrush x:Key="BsPrimary" Color="{StaticResource PrimaryRgb}" />
+	<SolidColorBrush x:Key="BsSecondary" Color="{StaticResource SecondaryRgb}" />
+	<SolidColorBrush x:Key="BsSuccess" Color="{StaticResource SuccessRgb}" />
+	<SolidColorBrush x:Key="BsInfo" Color="{StaticResource InfoRgb}" />
+	<SolidColorBrush x:Key="BsWarning" Color="{StaticResource WarningRgb}" />
+	<SolidColorBrush x:Key="BsDanger" Color="{StaticResource DangerRgb}" />
+	<SolidColorBrush x:Key="BsLight" Color="{StaticResource LightRgb}" />
+	<SolidColorBrush x:Key="BsDark" Color="{StaticResource DarkRgb}" />
+	<SolidColorBrush x:Key="BsWhite" Color="{StaticResource WhiteRgb}" />
+	<SolidColorBrush x:Key="BsBlack" Color="{StaticResource BlackRgb}" />
+
+	<!-- Dark Theme Text / Background -->
+	<SolidColorBrush x:Key="BsPrimaryTextEmphasis" Color="#cfe2ff" />
+	<SolidColorBrush x:Key="BsPrimaryBgSubtle" Color="#052c65" />
+	<SolidColorBrush x:Key="BsPrimaryBorderSubtle" Color="#0b4ed9" />
+
+	<SolidColorBrush x:Key="BsSecondaryTextEmphasis" Color="#e2e3e5" />
+	<SolidColorBrush x:Key="BsSecondaryBgSubtle" Color="#2b2f32" />
+	<SolidColorBrush x:Key="BsSecondaryBorderSubtle" Color="#3c4043" />
+
+	<SolidColorBrush x:Key="BsSuccessTextEmphasis" Color="#d1e7dd" />
+	<SolidColorBrush x:Key="BsSuccessBgSubtle" Color="#0a3622" />
+	<SolidColorBrush x:Key="BsSuccessBorderSubtle" Color="#14532d" />
+
+	<SolidColorBrush x:Key="BsInfoTextEmphasis" Color="#cff4fc" />
+	<SolidColorBrush x:Key="BsInfoBgSubtle" Color="#055160" />
+	<SolidColorBrush x:Key="BsInfoBorderSubtle" Color="#087990" />
+
+	<SolidColorBrush x:Key="BsWarningTextEmphasis" Color="#fff3cd" />
+	<SolidColorBrush x:Key="BsWarningBgSubtle" Color="#664d03" />
+	<SolidColorBrush x:Key="BsWarningBorderSubtle" Color="#998000" />
+
+	<SolidColorBrush x:Key="BsDangerTextEmphasis" Color="#f8d7da" />
+	<SolidColorBrush x:Key="BsDangerBgSubtle" Color="#58151c" />
+	<SolidColorBrush x:Key="BsDangerBorderSubtle" Color="#7a1e28" />
+
+	<SolidColorBrush x:Key="BsLightTextEmphasis" Color="#ced4da" />
+	<SolidColorBrush x:Key="BsLightBgSubtle" Color="#212529" />
+	<SolidColorBrush x:Key="BsLightBorderSubtle" Color="#343a40" />
+
+	<SolidColorBrush x:Key="BsDarkTextEmphasis" Color="#f8f9fa" />
+	<SolidColorBrush x:Key="BsDarkBgSubtle" Color="#495057" />
+	<SolidColorBrush x:Key="BsDarkBorderSubtle" Color="#6c757d" />
+
+	<!-- Body -->
+	<SolidColorBrush x:Key="BsBodyColor" Color="#F8F9FA" />
+	<SolidColorBrush x:Key="BsBodyBg" Color="#212529" />
+	<SolidColorBrush x:Key="BsEmphasisColor" Color="#FFFFFF" />
+
+	<SolidColorBrush x:Key="BsSecondaryColor" Color="#BFF8F9FA" />
+	<SolidColorBrush x:Key="BsTertiaryColor" Color="#7FF8F9FA" />
+
+	<SolidColorBrush x:Key="BsSecondaryBg" Color="#343a40" />
+	<SolidColorBrush x:Key="BsTertiaryBg" Color="#495057" />
+	<StaticResource x:Key="BsHeadingColor" ResourceKey="BsBodyColor" />
+
+	<SolidColorBrush x:Key="BsLinkColor" Color="#66b0ff" />
+	<SolidColorBrush x:Key="BsLinkHoverColor" Color="#0d6efd" />
+	<SolidColorBrush x:Key="BsCodeColor" Color="#ff7eb6" />
+	<SolidColorBrush x:Key="BsHighlightColor" Color="#212529" />
+	<SolidColorBrush x:Key="BsHighlightBg" Color="#664d03" />
+	<SolidColorBrush x:Key="BsBorderColor" Color="#495057" />
+	<SolidColorBrush x:Key="BsBorderColorTranslucent" Color="#4DFFFFFF" />
+
+	</Styles.Resources>
+	
 	<Style
 		Selector="Control.m-0.mt-0.mb-0.ms-0.me-0.mx-0.my-0.m-1.mt-1.mb-1.ms-1.me-1.mx-1.my-1.m-2.mt-2.mb-2.ms-2.me-2.mx-2.my-2.m-3.mt-3.mb-3.ms-3.me-3.mx-3.my-3.m-4.mt-4.mb-4.ms-4.me-4.mx-4.my-4.m-5.mt-5.mb-5.ms-5.me-5.mx-5.my-5" />
 	<Style
