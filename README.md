@@ -43,7 +43,7 @@ In your **`App.axaml`**, include the Bootstrap styles. This pulls the actual CSS
 
 Since NuGet files are "virtual," the IDE needs a local map to show you hints while you type.
 
-1. **Download** the [Bootstrap.Autocomplete.axaml](https://www.google.com/search?q=https://raw.githubusercontent.com/YourUsername/Repo/main/Bootstrap.Autocomplete.axaml) helper file.
+1. **Download** the [Bootstrap.Autocomplete.axaml]([https://www.google.com/search?q=https://raw.githubusercontent.com/YourUsername/Repo/main/Bootstrap.Autocomplete.axaml](https://github.com/saiah16526/Bootstrap.Avalonia.Toolkit/blob/master/Bootstrap.AutoComplete.axaml)) helper file.
 2. **Drop it** into your project (e.g., in an `/Assets` folder).
 3. **Set Build Action**: Right-click the file → **Properties** → **Build Action** = `AvaloniaResource`.
 
