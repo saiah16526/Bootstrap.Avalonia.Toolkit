@@ -33,8 +33,8 @@ In your **`App.axaml`**, include the Bootstrap styles. This pulls the actual CSS
 
 ```xml
 <Application.Styles>
-    <FluentTheme />
-    <StyleInclude Source="avares://Avalonia.Bootstrap/Assets/Theme.axaml" />
+        <FluentTheme />
+        <StyleInclude Source="avares://Bootstrap.Avalonia.ToolKit/Styles/Bootstrap.axaml"/>
 </Application.Styles>
 
 ```
