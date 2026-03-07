@@ -1,8 +1,3 @@
-I hear you. If you want people to actually use your toolkit, the README needs to look like a high-end library, not a quick note. It needs to sell the **"Developer Experience"**—how fast they can build a UI with your classes.
-
-Here is a detailed, professional, and visually structured README for **Avalonia.Bootstrap**.
-
----
 
 # 🚀 Avalonia.Bootstrap
 
