@@ -1,17 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.1;net8.0;net10.0</TargetFrameworks>
-        
+        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
         <LangVersion>latest</LangVersion>
-        
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
         <PackageId>Bootstrap.Avalonia.Toolkit</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Saiah Albert</Authors>
+        <Company>Saiah Albert</Company>
         <Description>Bootstrap-inspired utility classes and theme for Avalonia UI.</Description>
+        <PackageTags>avalonia;bootstrap;ui;styling;</PackageTags>
+
+        <PackageProjectUrl>https://github.com/saiah16526/Bootstrap.Avalonia.Toolkit</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        
+
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,8 +36,18 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AvaloniaResource Include="**\*.axaml"/>
+        <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     
+    <ItemGroup>
+        <AvaloniaResource Include="**\*.axaml">
+            <SubType>Designer</SubType>
+        </AvaloniaResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Runtime" />
+    </ItemGroup>
+
 
 </Project>
