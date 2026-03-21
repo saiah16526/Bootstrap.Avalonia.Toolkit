@@ -1,1837 +1,445 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:system="clr-namespace:System;assembly=System.Runtime"
-        xmlns:behaviours="clr-namespace:Bootstrap.Avalonia.Toolkit.Behaviors"
-        xmlns:converters="clr-namespace:Bootstrap.Avalonia.Toolkit.Converters">
-	<Styles.Resources>
-
-		<converters:ColorBrightnessConverter x:Key="BrightnessConverter" />
-
-		<SolidColorBrush x:Key="BsBlue" Color="#0d6efd" />
-		<SolidColorBrush x:Key="BsIndigo" Color="#6610f2" />
-		<SolidColorBrush x:Key="BsPurple" Color="#6f42c1" />
-		<SolidColorBrush x:Key="BsPink" Color="#d63384" />
-		<SolidColorBrush x:Key="BsRed" Color="#dc3545" />
-		<SolidColorBrush x:Key="BsOrange" Color="#fd7e14" />
-		<SolidColorBrush x:Key="BsYellow" Color="#ffc107" />
-		<SolidColorBrush x:Key="BsGreen" Color="#198754" />
-		<SolidColorBrush x:Key="BsTeal" Color="#20c997" />
-		<SolidColorBrush x:Key="BsCyan" Color="#0dcaf0" />
-		<SolidColorBrush x:Key="BsBlack" Color="#000000" />
-		<SolidColorBrush x:Key="BsWhite" Color="#ffffff" />
-
-		<SolidColorBrush x:Key="BsGray" Color="#6c757d" />
-		<SolidColorBrush x:Key="BsGrayDark" Color="#343a40" />
-		<SolidColorBrush x:Key="BsGray100" Color="#f8f9fa" />
-		<SolidColorBrush x:Key="BsGray200" Color="#e9ecef" />
-		<SolidColorBrush x:Key="BsGray300" Color="#dee2e6" />
-		<SolidColorBrush x:Key="BsGray400" Color="#ced4da" />
-		<SolidColorBrush x:Key="BsGray500" Color="#adb5bd" />
-		<SolidColorBrush x:Key="BsGray600" Color="#6c757d" />
-		<SolidColorBrush x:Key="BsGray700" Color="#495057" />
-		<SolidColorBrush x:Key="BsGray800" Color="#343a40" />
-		<SolidColorBrush x:Key="BsGray900" Color="#212529" />
-
-		<SolidColorBrush x:Key="BsPrimary" Color="#0d6efd" />
-		<SolidColorBrush x:Key="BsSecondary" Color="#6c757d" />
-		<SolidColorBrush x:Key="BsSuccess" Color="#198754" />
-		<SolidColorBrush x:Key="BsInfo" Color="#0dcaf0" />
-		<SolidColorBrush x:Key="BsWarning" Color="#ffc107" />
-		<SolidColorBrush x:Key="BsDanger" Color="#dc3545" />
-		<SolidColorBrush x:Key="BsLight" Color="#f8f9fa" />
-		<SolidColorBrush x:Key="BsDark" Color="#212529" />
-
-		<SolidColorBrush x:Key="BsPrimaryTextEmphasis" Color="#052c65" />
-		<SolidColorBrush x:Key="BsSecondaryTextEmphasis" Color="#2b2f32" />
-		<SolidColorBrush x:Key="BsSuccessTextEmphasis" Color="#0a3622" />
-		<SolidColorBrush x:Key="BsInfoTextEmphasis" Color="#055160" />
-		<SolidColorBrush x:Key="BsWarningTextEmphasis" Color="#664d03" />
-		<SolidColorBrush x:Key="BsDangerTextEmphasis" Color="#58151c" />
-		<SolidColorBrush x:Key="BsLightTextEmphasis" Color="#495057" />
-		<SolidColorBrush x:Key="BsDarkTextEmphasis" Color="#495057" />
-
-		<SolidColorBrush x:Key="BsPrimaryBgSubtle" Color="#cfe2ff" />
-		<SolidColorBrush x:Key="BsSecondaryBgSubtle" Color="#e2e3e5" />
-		<SolidColorBrush x:Key="BsSuccessBgSubtle" Color="#d1e7dd" />
-		<SolidColorBrush x:Key="BsInfoBgSubtle" Color="#cff4fc" />
-		<SolidColorBrush x:Key="BsWarningBgSubtle" Color="#fff3cd" />
-		<SolidColorBrush x:Key="BsDangerBgSubtle" Color="#f8d7da" />
-		<SolidColorBrush x:Key="BsLightBgSubtle" Color="#fcfcfd" />
-		<SolidColorBrush x:Key="BsDarkBgSubtle" Color="#ced4da" />
-
-		<SolidColorBrush x:Key="BsPrimaryBorderSubtle" Color="#9ec5fe" />
-		<SolidColorBrush x:Key="BsSecondaryBorderSubtle" Color="#c4c8cb" />
-		<SolidColorBrush x:Key="BsSuccessBorderSubtle" Color="#a3cfbb" />
-		<SolidColorBrush x:Key="BsInfoBorderSubtle" Color="#9eeaf9" />
-		<SolidColorBrush x:Key="BsWarningBorderSubtle" Color="#ffe69c" />
-		<SolidColorBrush x:Key="BsDangerBorderSubtle" Color="#f1aeb5" />
-		<SolidColorBrush x:Key="BsLightBorderSubtle" Color="#e9ecef" />
-		<SolidColorBrush x:Key="BsDarkBorderSubtle" Color="#adb5bd" />
-
-		<FontFamily x:Key="BsFontSansSerif">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
-		<FontFamily x:Key="BsFontMonospace">"SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Monospace</FontFamily>
-
-		<SolidColorBrush x:Key="BsBodyColor" Color="#212529" />
-		<SolidColorBrush x:Key="BsBodyBg" Color="#ffffff" />
-		<FontFamily x:Key="BsBodyFontFamily">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
-		<system:Double x:Key="BsBodyFontSize">16</system:Double>
-		<FontWeight x:Key="BsBodyFontWeight">Normal</FontWeight>
-		<system:Double x:Key="BsBodyLineHeight">24</system:Double>
-
-		<SolidColorBrush x:Key="BsEmphasisColor" Color="#000000" />
-		<SolidColorBrush x:Key="BsSecondaryColor" Color="#54595d" />
-		<SolidColorBrush x:Key="BsSecondaryBg" Color="#e9ecef" />
-		<SolidColorBrush x:Key="BsTertiaryColor" Color="#7f7f7f" />
-		<SolidColorBrush x:Key="BsTertiaryBg" Color="#f8f9fa" />
-		<SolidColorBrush x:Key="BsLinkColor" Color="#0d6efd" />
-		<SolidColorBrush x:Key="BsLinkHoverColor" Color="#0a58ca" />
-		<SolidColorBrush x:Key="BsCodeColor" Color="#d63384" />
-		<SolidColorBrush x:Key="BsHighlightColor" Color="#212529" />
-		<SolidColorBrush x:Key="BsHighlightBg" Color="#fff3cd" />
-		<SolidColorBrush x:Key="BsBorderColor" Color="#dee2e6" />
-		<SolidColorBrush x:Key="BsBorderColorTranslucent" Color="#2c2c2c2c" />
-
-		<Thickness x:Key="BsBorderWidth">1</Thickness>
-		<system:String x:Key="BsLinkDecoration">Underline</system:String>
-
-		<CornerRadius x:Key="BsBorderRadius">6</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusSm">4</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusLg">8</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusXl">16</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusXxl">32</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadius2Xl">32</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusPill">800</CornerRadius>
-
-		<DropShadowEffect x:Key="BsBoxShadow" BlurRadius="16" Color="#26000000" OffsetY="8" />
-		<DropShadowEffect x:Key="BsBoxShadowSm" BlurRadius="4" Color="#13000000" OffsetY="2" />
-		<DropShadowEffect x:Key="BsBoxShadowLg" BlurRadius="48" Color="#2c000000" OffsetY="16" />
-
-		<system:Double x:Key="BsFocusRingWidth">4</system:Double>
-		<SolidColorBrush x:Key="BsFocusRingColor" Color="#400d6efd" />
-
-		<SolidColorBrush x:Key="BsFormValidColor" Color="#198754" />
-		<SolidColorBrush x:Key="BsFormValidBorderColor" Color="#198754" />
-		<SolidColorBrush x:Key="BsFormInvalidColor" Color="#dc3545" />
-		<SolidColorBrush x:Key="BsFormInvalidBorderColor" Color="#dc3545" />
-	</Styles.Resources>
-
-	<Style Selector="Window.body">
-		<Setter Property="Padding" Value="0" />
-		<Setter Property="FontFamily" Value="{DynamicResource BsFontSansSerif}" />
-		<Setter Property="FontSize" Value="{DynamicResource BsBodyFontSize}" />
-		<Setter Property="FontWeight" Value="{DynamicResource BsBodyFontWeight}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
-		<Setter Property="TextBlock.TextAlignment" Value="Left" />
-		<Setter Property="TextBlock.LineHeight" Value="24" />
-	</Style>
-
-	<Style Selector="Separator.hr">
-		<Setter Property="Margin" Value="0,16" />
-		<Setter Property="Height" Value="1" />
-		<Setter Property="Background" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Opacity" Value="0.25" />
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style Selector="TextBlock.h1, TextBlock.h2, TextBlock.h3, TextBlock.h4, TextBlock.h5, TextBlock.h6">
-		<Setter Property="Control.Margin" Value="0,0,0,8" />
-		<Setter Property="TextElement.FontWeight" Value="Medium" />
-		<Setter Property="TextBlock.LineHeight" Value="24" />
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="TextBlock.h1">
-		<Setter Property="FontSize" Value="40" />
-		<Setter Property="LineHeight" Value="48" />
-	</Style>
-
-	<Style Selector="TextBlock.h2">
-		<Setter Property="FontSize" Value="32" />
-		<Setter Property="LineHeight" Value="38.4" />
-	</Style>
-
-	<Style Selector="TextBlock.h3">
-		<Setter Property="FontSize" Value="28" />
-		<Setter Property="LineHeight" Value="33.6" />
-	</Style>
-
-	<Style Selector="TextBlock.h4">
-		<Setter Property="FontSize" Value="24" />
-		<Setter Property="LineHeight" Value="28.8" />
-	</Style>
-
-	<Style Selector="TextBlock.h5">
-		<Setter Property="FontSize" Value="20" />
-	</Style>
-
-	<Style Selector="TextBlock.h6">
-		<Setter Property="FontSize" Value="16" />
-	</Style>
-
-	<Style Selector="TextBlock.p">
-		<Setter Property="Margin" Value="0,0,0,16" />
-	</Style>
-
-	<Style Selector="TextBlock.strong, Run.strong">
-		<Setter Property="TextElement.FontWeight" Value="SemiBold" />
-	</Style>
-
-	<Style Selector="TextBlock.abbr">
-		<Setter Property="TextDecorations" Value="Underline" />
-		<Setter Property="Cursor" Value="Help" />
-	</Style>
-
-	<Style Selector="TextBlock.address">
-		<Setter Property="Margin" Value="0,0,0,16" />
-		<Setter Property="FontStyle" Value="Normal" />
-		<Setter Property="LineHeight" Value="{DynamicResource BsBodyLineHeight}" />
-	</Style>
-
-	<Style Selector="TextBlock.small, Run.small">
-		<Setter Property="TextElement.FontSize" Value="14" />
-	</Style>
-
-	<Style Selector="TextBlock.mark, Run.mark">
-		<Setter Property="TextElement.Background" Value="{DynamicResource BsHighlightBg}" />
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsHighlightColor}" />
-	</Style>
-	
-	<Style Selector="TextBlock.del">
-		<Setter Property="TextDecorations" Value="Strikethrough" />
-	</Style>
-	
-	<Style Selector="Run.sub">
-		<Setter Property="BaselineAlignment" Value="Subscript" />
-		<Setter Property="FontSize" Value="12" />
-	</Style>
-
-	<Style Selector="Run.sup">
-		<Setter Property="BaselineAlignment" Value="Superscript" />
-		<Setter Property="FontSize" Value="12" />
-	</Style>
-
-	<Style Selector="Button.a">
-		<Setter Property="Foreground" Value="{DynamicResource BsLinkColor}" />
-		<Setter Property="Padding" Value="0" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderThickness" Value="0" />
-		<Setter Property="TextBlock.TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="Button.a:pointerover /template/ ContentPresenter">
-		<Setter Property="Foreground" Value="{DynamicResource BsLinkHoverColor}" />
-		<Setter Property="Background" Value="Transparent" />
-	</Style>
-
-	<Style Selector="TextBlock.code, Run.code, TextBlock.pre">
-		<Setter Property="TextElement.FontFamily" Value="{DynamicResource BsFontMonospace}" />
-		<Setter Property="TextElement.FontSize" Value="14" />
-	</Style>
-
-	<Style Selector="Run.code">
-		<Setter Property="Foreground" Value="{DynamicResource BsCodeColor}" />
-	</Style>
-
-	<Style Selector="Border.kbd">
-		<Setter Property="Background" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="CornerRadius" Value="4" />
-		<Setter Property="Padding" Value="6,3" />
-	</Style>
-
-	<Style Selector="Border.kbd TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyBg}" />
-		<Setter Property="FontSize" Value="14" />
-	</Style>
-
-	<Style Selector="Border.pre">
-		<Setter Property="Margin" Value="0,0,0,16" />
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style Selector="Label">
-		<Setter Property="VerticalAlignment" Value="Center" />
-	</Style>
-
-	<Style Selector="Button">
-		<Setter Property="CornerRadius" Value="0" />
-	</Style>
-
-	<Style Selector="TextBox, Button, ComboBox, TextBox.textarea">
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="FontFamily" Value="{DynamicResource BsBodyFontFamily}" />
-		<Setter Property="FontSize" Value="{DynamicResource BsBodyFontSize}" />
-	</Style>
-
-	<Style Selector="Button">
-		<Setter Property="Cursor" Value="Hand" />
-	</Style>
-
-	<Style Selector="Button:disabled">
-		<Setter Property="Cursor" Value="Arrow" />
-	</Style>
-
-	<Style Selector="TextBlock.lead">
-		<Setter Property="FontSize" Value="20" />
-		<Setter Property="FontWeight" Value="Light" />
-	</Style>
-
-	<Style
-		Selector="TextBlock.display-1, TextBlock.display-2, TextBlock.display-3, TextBlock.display-4, TextBlock.display-5, TextBlock.display-6">
-		<Setter Property="FontWeight" Value="Light" />
-		<Setter Property="TextBlock.LineHeight" Value="1.2" />
-	</Style>
-
-	<Style Selector="TextBlock.display-1">
-		<Setter Property="FontSize" Value="80" />
-		<Setter Property="LineHeight" Value="96" />
-	</Style>
-
-	<Style Selector="TextBlock.display-2">
-		<Setter Property="FontSize" Value="72" />
-		<Setter Property="LineHeight" Value="86.4" />
-	</Style>
-
-	<Style Selector="TextBlock.display-3">
-		<Setter Property="FontSize" Value="64" />
-		<Setter Property="LineHeight" Value="76.8" />
-	</Style>
-
-	<Style Selector="TextBlock.display-4">
-		<Setter Property="FontSize" Value="56" />
-		<Setter Property="LineHeight" Value="67.2" />
-	</Style>
-
-	<Style Selector="TextBlock.display-5">
-		<Setter Property="FontSize" Value="48" />
-		<Setter Property="LineHeight" Value="57.6" />
-	</Style>
-
-	<Style Selector="TextBlock.display-6">
-		<Setter Property="FontSize" Value="40" />
-		<Setter Property="LineHeight" Value="48" />
-	</Style>
-
-	<Style Selector="StackPanel.blockquote, TextBlock.blockquote">
-		<Setter Property="TemplatedControl.Margin" Value="0,0,0,16" />
-		<Setter Property="TextElement.FontSize" Value="20" />
-	</Style>
-
-	<Style Selector="TextBlock.blockquote-footer">
-		<Setter Property="Margin" Value="0,0,0,16" />
-		<Setter Property="FontSize" Value="14" />
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style Selector="Image.img-fluid">
-		<Setter Property="MaxWidth" Value="10000" /> <Setter Property="Stretch" Value="Uniform" />
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style Selector="Border.img-thumbnail">
-		<Setter Property="Padding" Value="4" />
-		<Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="CornerRadius" Value="4" />
-	</Style>
-
-	<Style Selector="StackPanel.figure">
-		<Setter Property="Spacing" Value="8" />
-	</Style>
-
-	<Style Selector="TextBlock.figure-caption">
-		<Setter Property="FontSize" Value="14" />
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondaryColor}" />
-	</Style>
-
-	<Style Selector="ContentControl.container, Panel.container, StackPanel.container, Grid.container, DockPanel.container, WrapPanel.container, UniformGrid.container, Border.container">
-		<Setter Property="MaxWidth" Value="1320" />
-		<Setter Property="Margin" Value="12,0" />
-		<Setter Property="Width" Value="NaN" />
-	</Style>
-
-	<Style Selector="ContentControl.container-fluid, Panel.container-fluid, StackPanel.container-fluid, Grid.container-fluid, DockPanel.container-fluid, WrapPanel.container-fluid, UniformGrid.container-fluid, Border.container-fluid">
-		<Setter Property="Control.HorizontalAlignment" Value="Stretch" />
-		<Setter Property="Control.Margin" Value="12,0" />
-	</Style>
-
-	<Style Selector="Label.form-label">
-		<Setter Property="Margin" Value="0,0,0,8" />
-		<Setter Property="Padding" Value="0" />
-		<Setter Property="FontWeight" Value="Normal" />
-	</Style>
-
-	<Style Selector="TextBlock.form-text">
-		<Setter Property="Margin" Value="0,4,0,0" />
-		<Setter Property="FontSize" Value="14" />
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondaryColor}" />
-	</Style>
-
-	<Style Selector="TextBox.form-control">
-		<Setter Property="Padding" Value="12,6" /> <Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="CornerRadius" Value="6" /> <Setter Property="FontSize" Value="16" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-
-		<Setter Property="Transitions">
-			<Transitions>
-				<BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
-			</Transitions>
-		</Setter>
-	</Style>
-
-	<Style Selector="TextBox.form-control:focus /template/ Border#PART_BorderElement">
-		<Setter Property="BorderBrush" Value="#86b7fe" />
-		<Setter Property="BoxShadow" Value="0 0 0 4 #400d6efd" />
-	</Style>
-
-	<Style Selector="TextBox.form-control-sm">
-		<Setter Property="Padding" Value="8,4" />
-		<Setter Property="FontSize" Value="14" />
-	</Style>
-
-	<Style Selector="TextBox.form-control-lg">
-		<Setter Property="Padding" Value="16,8" />
-		<Setter Property="FontSize" Value="20" />
-	</Style>
-
-	<Style Selector="ComboBox.form-select">
-		<Setter Property="Padding" Value="12,6,36,6" />
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-		<Setter Property="CornerRadius" Value="6" />
-	</Style>
-
-	<Style Selector="ComboBox.form-select:focus">
-		<Setter Property="BorderBrush" Value="#86b7fe" />
-	</Style>
-
-	<Style Selector="CheckBox.form-check-input">
-		<Setter Property="MinWidth" Value="0" />
-		<Setter Property="Padding" Value="0" />
-		<Setter Property="Margin" Value="0,4,0,0" />
-	</Style>
-
-	<Style Selector="CheckBox.form-check-input:checked /template/ Border#NormalRectangle">
-		<Setter Property="Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style Selector="ToggleSwitch.form-switch">
-		<Setter Property="OnContent" Value="" />
-		<Setter Property="OffContent" Value="" />
-	</Style>
-
-	<Style Selector="Slider.form-range">
-		<Setter Property="Background" Value="{DynamicResource BsSecondaryBg}" />
-	</Style>
-
-	<Style Selector="Slider.form-range /template/ Thumb">
-		<Setter Property="Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="BorderThickness" Value="0" />
-		<Setter Property="Width" Value="16" />
-		<Setter Property="Height" Value="16" />
-		<Setter Property="CornerRadius" Value="16" />
-		<Setter Property="Transitions">
-			<Transitions>
-				<BrushTransition Property="Background" Duration="0:0:0.15" />
-			</Transitions>
-		</Setter>
-	</Style>
-
-	<Style Selector="Slider.form-range /template/ Thumb:pressed">
-		<Setter Property="Background" Value="#b6d4fe" />
-	</Style>
-
-	<Style Selector="Slider.form-range /template/ RepeatButton#PART_SelectionRangeBackground">
-		<Setter Property="Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="Height" Value="8" />
-		<Setter Property="CornerRadius" Value="8" />
-	</Style>
-
-	<Style Selector="TextBox.form-floating">
-		<Setter Property="MinHeight" Value="58" />
-		<Setter Property="Padding" Value="12,26,12,6" />
-	</Style>
-
-	<Style Selector="Border.input-group">
-		<Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="CornerRadius" Value="6" />
-		<Setter Property="ClipToBounds" Value="True" />
-		<Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
-	</Style>
-
-	<Style Selector="Border.input-group">
-		<Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="CornerRadius" Value="{DynamicResource Bs}" />
-		<Setter Property="ClipToBounds" Value="True" />
-		<Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
-	</Style>
-
-	<Style Selector="Border.input-group > Grid">
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-		<Setter Property="VerticalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style Selector="Border.input-group-text">
-		<Setter Property="Background" Value="{DynamicResource BsTertiaryBg}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
-		<Setter Property="BorderThickness" Value="0,0,1,0" /> <Setter Property="Padding" Value="12,6" />
-		<Setter Property="VerticalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style Selector="Border.input-group TextBox">
-		<Setter Property="BorderThickness" Value="0" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="CornerRadius" Value="0" />
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-		<Setter Property="VerticalAlignment" Value="Stretch" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="FocusAdorner" Value="{x:Null}" />
-		<Setter Property="MinHeight" Value="0" />
-	</Style>
-
-	<Style Selector="Border.input-group:focus-within">
-		<Setter Property="BorderBrush" Value="#86b7fe" />
-		<Setter Property="BoxShadow" Value="0 0 0 4 #400d6efd" />
-	</Style>
-
-	<Style Selector="Border.input-group-sm">
-		<Setter Property="CornerRadius" Value="4" />
-	</Style>
-
-	<Style
-		Selector="Border.input-group-sm TextBlock, 
-                Border.input-group-sm TextBox, 
-                Border.input-group-sm Button, 
-                Border.input-group-sm Border">
-		<Setter Property="TemplatedControl.Padding" Value="8,4" />
-		<Setter Property="TextBlock.FontSize" Value="14" />
-	</Style>
-
-	<Style Selector="Border.input-group-lg">
-		<Setter Property="CornerRadius" Value="8" />
-	</Style>
-
-	<Style
-		Selector="Border.input-group-lg TextBlock, 
-                Border.input-group-lg TextBox, 
-                Border.input-group-lg Button, 
-                Border.input-group-lg Border">
-		<Setter Property="TemplatedControl.Padding" Value="16,8" />
-		<Setter Property="TextBlock.FontSize" Value="20" />
-	</Style>
-
-	<Style Selector="Button.btn">
-		<Setter Property="Padding" Value="12,6" />
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="FontSize" Value="{DynamicResource BsBodyFontSize}" />
-		<Setter Property="FontWeight" Value="Normal" />
-		<Setter Property="BorderThickness" Value="0" />
-		<Setter Property="CornerRadius" Value="{DynamicResource BsBorderRadius}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Transitions">
-			<Transitions>
-				<BrushTransition Property="Background" Duration="0:0:0.15" />
-				<BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
-				<BrushTransition Property="Foreground" Duration="0:0:0.15" />
-			</Transitions>
-		</Setter>
-	</Style>
-
-	<Style Selector="Button.btn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="Transparent" />
-	</Style>
-
-	<Style Selector="Button.btn:disabled">
-		<Setter Property="Opacity" Value="0.65" />
-	</Style>
-
-	<Style Selector="Button.btn-primary">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style Selector="Button.btn-primary TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-primary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-primary:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-secondary">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style Selector="Button.btn-secondary TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-secondary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-secondary:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-success">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSuccess}" />
-	</Style>
-
-	<Style Selector="Button.btn-success TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-success:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-success:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-info">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-		<Setter Property="Background" Value="{DynamicResource BsInfo}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsInfo}" />
-	</Style>
-
-	<Style Selector="Button.btn-info TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-info:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-info:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-warning">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-		<Setter Property="Background" Value="{DynamicResource BsWarning}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsWarning}" />
-	</Style>
-
-	<Style Selector="Button.btn-warning TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-warning:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-warning:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-danger">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="{DynamicResource BsDanger}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDanger}" />
-	</Style>
-
-	<Style Selector="Button.btn-danger TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-danger:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-danger:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-light">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-		<Setter Property="Background" Value="{DynamicResource BsLight}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsLight}" />
-	</Style>
-
-	<Style Selector="Button.btn-light TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-light:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-light:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-dark">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-		<Setter Property="Background" Value="{DynamicResource BsDark}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDark}" />
-	</Style>
-
-	<Style Selector="Button.btn-dark TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-dark:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-dark:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.2" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="BorderBrush">
-			<Setter.Value>
-				<Binding Path="Background"
-				         RelativeSource="{RelativeSource TemplatedParent}"
-				         Converter="{StaticResource BrightnessConverter}"
-				         ConverterParameter="-0.12" />
-			</Setter.Value>
-		</Setter>
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-primary">
-		<Setter Property="Foreground" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-primary TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-primary:pointerover TextBlock, Button.btn-outline-primary:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-primary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-primary:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-secondary">
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-secondary TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-secondary:pointerover TextBlock, Button.btn-outline-secondary:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-secondary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-secondary:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-success">
-		<Setter Property="Foreground" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSuccess}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-success TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsSuccess}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-success:pointerover TextBlock, Button.btn-outline-success:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-success:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-success:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-info">
-		<Setter Property="Foreground" Value="{DynamicResource BsInfo}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsInfo}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-info TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsInfo}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-info:pointerover TextBlock, Button.btn-outline-info:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-info:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsInfo}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsInfo}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-info:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsInfo}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsInfo}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-warning">
-		<Setter Property="Foreground" Value="{DynamicResource BsWarning}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsWarning}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-warning TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsWarning}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-warning:pointerover TextBlock, Button.btn-outline-warning:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-warning:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsWarning}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsWarning}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-warning:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsWarning}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsWarning}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-danger">
-		<Setter Property="Foreground" Value="{DynamicResource BsDanger}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDanger}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-danger TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsDanger}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-danger:pointerover TextBlock, Button.btn-outline-danger:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-danger:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsDanger}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDanger}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-danger:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsDanger}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDanger}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-light">
-		<Setter Property="Foreground" Value="{DynamicResource BsLight}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsLight}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-light TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsLight}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-light:pointerover TextBlock, Button.btn-outline-light:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-light:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsLight}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsLight}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-light:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsLight}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsLight}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-dark">
-		<Setter Property="Foreground" Value="{DynamicResource BsDark}" />
-		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDark}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-dark TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsDark}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-dark:pointerover TextBlock, Button.btn-outline-dark:pressed TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-dark:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsDark}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDark}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-outline-dark:pressed /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{DynamicResource BsDark}" />
-		<Setter Property="BorderBrush" Value="{DynamicResource BsDark}" />
-		<Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="Button.btn-lg">
-		<Setter Property="Padding" Value="16,8" />
-		<Setter Property="FontSize" Value="20" />
-		<Setter Property="CornerRadius" Value="8" />
-	</Style>
-
-	<Style Selector="Button.btn-sm">
-		<Setter Property="Padding" Value="8,4" />
-		<Setter Property="FontSize" Value="14" />
-		<Setter Property="CornerRadius" Value="4" />
-	</Style>
-
-	<Style Selector="Grid.btn-group">
-		<Setter Property="HorizontalAlignment" Value="Left" />
-	</Style>
-
-	<Style Selector="Grid.btn-group > Button">
-		<Setter Property="CornerRadius" Value="0" />
-		<Setter Property="Padding" Value="12,6" /> <Setter Property="Margin" Value="-1,0,0,0" />
-	</Style>
-
-	<Style Selector="Grid.btn-group > Button:nth-child(1)">
-		<Setter Property="CornerRadius" Value="4,0,0,4" />
-		<Setter Property="Margin" Value="0" />
-	</Style>
-
-	<Style Selector="Grid.btn-group > Button:nth-last-child(1)">
-		<Setter Property="CornerRadius" Value="0,4,4,0" />
-	</Style>
-
-	<Style Selector="Grid.btn-group > Button:pointerover, 
-                Grid.btn-group > Button:pressed">
-		<Setter Property="ZIndex" Value="1" />
-	</Style>
-
-	<Style
-		Selector="ContentControl.fade, Border.fade, Grid.fade, StackPanel.fade, DockPanel.fade, WrapPanel.fade, Canvas.fade, Panel.fade, ItemsControl.fade, ListBox.fade, ListBoxItem.fade, Button.fade, ToggleButton.fade, CheckBox.fade, RadioButton.fade, TextBlock.fade, TextBox.fade, ScrollViewer.fade, Image.fade">
-		<Setter Property="Opacity" Value="0" />
-		<Setter Property="Transitions">
-			<Transitions>
-				<DoubleTransition Property="Opacity" Duration="0:0:0.15" />
-			</Transitions>
-		</Setter>
-	</Style>
-
-	<Style
-		Selector="ContentControl.fade.show, Border.fade.show, Grid.fade.show, StackPanel.fade.show, DockPanel.fade.show, WrapPanel.fade.show, Canvas.fade.show, Panel.fade.show, ItemsControl.fade.show, ListBox.fade.show, ListBoxItem.fade.show, Button.fade.show, ToggleButton.fade.show, CheckBox.fade.show, RadioButton.fade.show, TextBlock.fade.show, TextBox.fade.show, ScrollViewer.fade.show, Image.fade.show">
-		<Setter Property="Opacity" Value="1" />
-	</Style>
-
-	<Style Selector="Border.card">
-		<Setter Property="Background" Value="{DynamicResource BsWhite}" />
-		<Setter Property="BorderBrush" Value="#dee2e6" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="CornerRadius" Value="6" />
-		<Setter Property="ClipToBounds" Value="True" />
-	</Style>
-
-	<Style Selector="Border.card > StackPanel">
-		<Setter Property="Orientation" Value="Vertical" />
-	</Style>
-
-	<Style Selector="Border.card-header">
-		<Setter Property="Padding" Value="16,8" />
-		<Setter Property="Background" Value="#08000000" />
-		<Setter Property="BorderBrush" Value="#dee2e6" />
-		<Setter Property="BorderThickness" Value="0,0,0,1" />
-	</Style>
-
-	<Style Selector="Border.card-header TextBlock">
-		<Setter Property="FontWeight" Value="SemiBold" />
-	</Style>
-
-	<Style
-		Selector="StackPanel.card-body, Grid.card-body, DockPanel.card-body, WrapPanel.card-body, Panel.card-body, ContentControl.card-body">
-		<Setter Property="Margin" Value="16" />
-	</Style>
-
-	<Style Selector="TextBlock.card-title">
-		<Setter Property="FontSize" Value="20" />
-		<Setter Property="FontWeight" Value="Medium" />
-		<Setter Property="Margin" Value="0,0,0,8" />
-	</Style>
-
-	<Style Selector="TextBlock.card-subtitle">
-		<Setter Property="FontSize" Value="14" />
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="Margin" Value="0,-4,0,8" />
-	</Style>
-
-	<Style Selector="TextBlock.card-text">
-		<Setter Property="Margin" Value="0,0,0,16" />
-	</Style>
-
-	<Style Selector="Border.card-footer">
-		<Setter Property="Padding" Value="16,8" />
-		<Setter Property="Background" Value="#08000000" />
-		<Setter Property="BorderBrush" Value="#dee2e6" />
-		<Setter Property="BorderThickness" Value="0,1,0,0" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-primary, StackPanel.text-bg-primary, Grid.text-bg-primary, DockPanel.text-bg-primary, WrapPanel.text-bg-primary, Canvas.text-bg-primary, Panel.text-bg-primary, ContentControl.text-bg-primary">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-secondary, StackPanel.text-bg-secondary, Grid.text-bg-secondary, DockPanel.text-bg-secondary, WrapPanel.text-bg-secondary, Canvas.text-bg-secondary, Panel.text-bg-secondary, ContentControl.text-bg-secondary">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-success, StackPanel.text-bg-success, Grid.text-bg-success, DockPanel.text-bg-success, WrapPanel.text-bg-success, Canvas.text-bg-success, Panel.text-bg-success, ContentControl.text-bg-success">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-info, StackPanel.text-bg-info, Grid.text-bg-info, DockPanel.text-bg-info, WrapPanel.text-bg-info, Canvas.text-bg-info, Panel.text-bg-info, ContentControl.text-bg-info">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsInfo}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-warning, StackPanel.text-bg-warning, Grid.text-bg-warning, DockPanel.text-bg-warning, WrapPanel.text-bg-warning, Canvas.text-bg-warning, Panel.text-bg-warning, ContentControl.text-bg-warning">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsWarning}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-danger, StackPanel.text-bg-danger, Grid.text-bg-danger, DockPanel.text-bg-danger, WrapPanel.text-bg-danger, Canvas.text-bg-danger, Panel.text-bg-danger, ContentControl.text-bg-danger">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsDanger}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-light, StackPanel.text-bg-light, Grid.text-bg-light, DockPanel.text-bg-light, WrapPanel.text-bg-light, Canvas.text-bg-light, Panel.text-bg-light, ContentControl.text-bg-light">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsLight}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style
-		Selector="Border.text-bg-dark, StackPanel.text-bg-dark, Grid.text-bg-dark, DockPanel.text-bg-dark, WrapPanel.text-bg-dark, Canvas.text-bg-dark, Panel.text-bg-dark, ContentControl.text-bg-dark">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsDark}" />
-		<Setter Property="TemplatedControl.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="TextBlock.link-primary">
-		<Setter Property="Foreground" Value="{DynamicResource BsPrimary}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-primary:pointerover">
-		<Setter Property="Foreground" Value="#0a58ca" />
-	</Style>
-	<Style Selector="TextBlock.link-secondary">
-		<Setter Property="Foreground" Value="{DynamicResource BsSecondary}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-secondary:pointerover">
-		<Setter Property="Foreground" Value="#565e64" />
-	</Style>
-
-	<Style Selector="TextBlock.link-success">
-		<Setter Property="Foreground" Value="{DynamicResource BsSuccess}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-success:pointerover">
-		<Setter Property="Foreground" Value="#146c43" />
-	</Style>
-
-	<Style Selector="TextBlock.link-info">
-		<Setter Property="Foreground" Value="{DynamicResource BsInfo}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-info:pointerover">
-		<Setter Property="Foreground" Value="#3dd5f3" />
-	</Style>
-
-	<Style Selector="TextBlock.link-warning">
-		<Setter Property="Foreground" Value="{DynamicResource BsWarning}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-warning:pointerover">
-		<Setter Property="Foreground" Value="#ffcd39" />
-	</Style>
-
-	<Style Selector="TextBlock.link-danger">
-		<Setter Property="Foreground" Value="{DynamicResource BsDanger}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-danger:pointerover">
-		<Setter Property="Foreground" Value="#b02a37" />
-	</Style>
-
-	<Style Selector="TextBlock.link-light">
-		<Setter Property="Foreground" Value="{DynamicResource BsLight}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-light:pointerover">
-		<Setter Property="Foreground" Value="#f9fafb" />
-	</Style>
-
-	<Style Selector="TextBlock.link-dark">
-		<Setter Property="Foreground" Value="{DynamicResource BsDark}" />
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.link-dark:pointerover">
-		<Setter Property="Foreground" Value="#1a1e21" />
-	</Style>
-
-	<Style Selector="TextBlock.text-truncate">
-		<Setter Property="TextTrimming" Value="CharacterEllipsis" />
-		<Setter Property="TextWrapping" Value="NoWrap" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-top, StackPanel.align-self-top, Grid.align-self-top, Button.align-self-top, TextBlock.align-self-top, Image.align-self-top, Path.align-self-top, DockPanel.align-self-top, WrapPanel.align-self-top, Canvas.align-self-top, Panel.align-self-top, ContentControl.align-self-top">
-		<Setter Property="VerticalAlignment" Value="Top" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-middle, StackPanel.align-self-middle, Grid.align-self-middle, Button.align-self-middle, TextBlock.align-self-middle, Image.align-self-middle, Path.align-self-middle, DockPanel.align-self-middle, WrapPanel.align-self-middle, Canvas.align-self-middle, Panel.align-self-middle, ContentControl.align-self-middle">
-		<Setter Property="VerticalAlignment" Value="Center" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-bottom, StackPanel.align-self-bottom, Grid.align-self-bottom, Button.align-self-bottom, TextBlock.align-self-bottom, Image.align-self-bottom, Path.align-self-bottom, DockPanel.align-self-bottom, WrapPanel.align-self-bottom, Canvas.align-self-bottom, Panel.align-self-bottom, ContentControl.align-self-bottom">
-		<Setter Property="VerticalAlignment" Value="Bottom" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-stretch, StackPanel.align-self-stretch, Grid.align-self-stretch, Button.align-self-stretch, TextBlock.align-self-stretch, Image.align-self-stretch, Path.align-self-stretch, DockPanel.align-self-stretch, WrapPanel.align-self-stretch, Canvas.align-self-stretch, Panel.align-self-stretch, ContentControl.align-self-stretch">
-		<Setter Property="VerticalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-start, StackPanel.align-self-start, Grid.align-self-start, Button.align-self-start, TextBlock.align-self-start, Image.align-self-start, Path.align-self-start, DockPanel.align-self-start, WrapPanel.align-self-start, Canvas.align-self-start, Panel.align-self-start, ContentControl.align-self-start">
-		<Setter Property="HorizontalAlignment" Value="Left" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-center, StackPanel.align-self-center, Grid.align-self-center, Button.align-self-center, TextBlock.align-self-center, Image.align-self-center, Path.align-self-center, DockPanel.align-self-center, WrapPanel.align-self-center, Canvas.align-self-center, Panel.align-self-center, ContentControl.align-self-center">
-		<Setter Property="HorizontalAlignment" Value="Center" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-end, StackPanel.align-self-end, Grid.align-self-end, Button.align-self-end, TextBlock.align-self-end, Image.align-self-end, Path.align-self-end, DockPanel.align-self-end, WrapPanel.align-self-end, Canvas.align-self-end, Panel.align-self-end, ContentControl.align-self-end">
-		<Setter Property="HorizontalAlignment" Value="Right" />
-	</Style>
-
-	<Style
-		Selector="Border.align-self-stretch, StackPanel.align-self-stretch, Grid.align-self-stretch, Button.align-self-stretch, TextBlock.align-self-stretch, Image.align-self-stretch, Path.align-self-stretch, DockPanel.align-self-stretch, WrapPanel.align-self-stretch, Canvas.align-self-stretch, Panel.align-self-stretch, ContentControl.align-self-stretch">
-		<Setter Property="HorizontalAlignment" Value="Stretch" />
-	</Style>
-
-	<Style
-		Selector="Border.opacity-0, StackPanel.opacity-0, Grid.opacity-0, Button.opacity-0, TextBlock.opacity-0, Image.opacity-0, Path.opacity-0, DockPanel.opacity-0, WrapPanel.opacity-0, Canvas.opacity-0, Panel.opacity-0, ContentControl.opacity-0">
-		<Setter Property="Opacity" Value="0.0" />
-	</Style>
-
-	<Style
-		Selector="Border.opacity-25, StackPanel.opacity-25, Grid.opacity-25, Button.opacity-25, TextBlock.opacity-25, Image.opacity-25, Path.opacity-25, DockPanel.opacity-25, WrapPanel.opacity-25, Canvas.opacity-25, Panel.opacity-25, ContentControl.opacity-25">
-		<Setter Property="Opacity" Value="0.25" />
-	</Style>
-
-	<Style
-		Selector="Border.opacity-50, StackPanel.opacity-50, Grid.opacity-50, Button.opacity-50, TextBlock.opacity-50, Image.opacity-50, Path.opacity-50, DockPanel.opacity-50, WrapPanel.opacity-50, Canvas.opacity-50, Panel.opacity-50, ContentControl.opacity-50">
-		<Setter Property="Opacity" Value="0.5" />
-	</Style>
-
-	<Style
-		Selector="Border.opacity-75, StackPanel.opacity-75, Grid.opacity-75, Button.opacity-75, TextBlock.opacity-75, Image.opacity-75, Path.opacity-75, DockPanel.opacity-75, WrapPanel.opacity-75, Canvas.opacity-75, Panel.opacity-75, ContentControl.opacity-75">
-		<Setter Property="Opacity" Value="0.75" />
-	</Style>
-
-	<Style
-		Selector="Border.opacity-100, StackPanel.opacity-100, Grid.opacity-100, Button.opacity-100, TextBlock.opacity-100, Image.opacity-100, Path.opacity-100, DockPanel.opacity-100, WrapPanel.opacity-100, Canvas.opacity-100, Panel.opacity-100, ContentControl.opacity-100">
-		<Setter Property="Opacity" Value="1.0" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-auto">
-		<Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
-		<Setter Property="VerticalScrollBarVisibility" Value="Auto" />
-	</Style>
-
-	<Style
-		Selector="Border.overflow-hidden, StackPanel.overflow-hidden, Grid.overflow-hidden, Canvas.overflow-hidden, ScrollViewer.overflow-hidden">
-		<Setter Property="ClipToBounds" Value="True" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-scroll">
-		<Setter Property="HorizontalScrollBarVisibility" Value="Visible" />
-		<Setter Property="VerticalScrollBarVisibility" Value="Visible" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-x-auto">
-		<Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-x-hidden">
-		<Setter Property="HorizontalScrollBarVisibility" Value="Hidden" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-x-scroll">
-		<Setter Property="HorizontalScrollBarVisibility" Value="Visible" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-y-auto">
-		<Setter Property="VerticalScrollBarVisibility" Value="Auto" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-y-hidden">
-		<Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
-	</Style>
-
-	<Style Selector="ScrollViewer.overflow-y-scroll">
-		<Setter Property="VerticalScrollBarVisibility" Value="Visible" />
-	</Style>
-
-	<Style
-		Selector="Border.border, Button.border, ListBoxItem.border, Button.border:pointerover, ListBoxItem.border:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsBorderColor}" />
-		<Setter Property="TemplatedControl.BorderThickness" Value="{DynamicResource BsBorderWidth}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-primary, Button.border-primary, ListBoxItem.border-primary, Button.border-primary:pointerover, ListBoxItem.border-primary:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-secondary, Button.border-secondary, ListBoxItem.border-secondary, Button.border-secondary:pointerover, ListBoxItem.border-secondary:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-success, Button.border-success, ListBoxItem.border-success, Button.border-success:pointerover, ListBoxItem.border-success:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsSuccess}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-info, Button.border-info, ListBoxItem.border-info, Button.border-info:pointerover, ListBoxItem.border-info:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsInfo}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-warning, Button.border-warning, ListBoxItem.border-warning, Button.border-warning:pointerover, ListBoxItem.border-warning:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsWarning}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-danger, Button.border-danger, ListBoxItem.border-danger, Button.border-danger:pointerover, ListBoxItem.border-danger:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsDanger}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-dark, Button.border-dark, ListBoxItem.border-dark,Button.border-dark:pointerover, ListBoxItem.border-dark:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsDark}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-black, Button.border-black, ListBoxItem.border-black, Button.border-black:pointerover, ListBoxItem.border-black:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style
-		Selector="Border.border-white, Button.border-white, ListBoxItem.border-white, Button.border-white:pointerover, ListBoxItem.border-white:pointerover">
-		<Setter Property="TemplatedControl.BorderBrush" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="TextBlock.font-monospace, TextBox.font-monospace, Run.font-monospace">
-		<Setter Property="TextElement.FontFamily" Value="{DynamicResource BsFontMonospace}" />
-	</Style>
-
-	<Style Selector="TextBlock.fs-1, TextBox.fs-1, Run.fs-1">
-		<Setter Property="TextElement.FontSize" Value="40" />
-	</Style>
-
-	<Style Selector="TextBlock.fs-2, TextBox.fs-2, Run.fs-2">
-		<Setter Property="TextElement.FontSize" Value="32" />
-	</Style>
-
-	<Style Selector="TextBlock.fs-3, TextBox.fs-3, Run.fs-3">
-		<Setter Property="TextElement.FontSize" Value="28" />
-	</Style>
-
-	<Style Selector="TextBlock.fs-4, TextBox.fs-4, Run.fs-4">
-		<Setter Property="TextElement.FontSize" Value="24" />
-	</Style>
-
-	<Style Selector="TextBlock.fs-5, TextBox.fs-5, Run.fs-5">
-		<Setter Property="TextElement.FontSize" Value="20" />
-	</Style>
-
-	<Style Selector="TextBlock.fs-6, TextBox.fs-6, Run.fs-6">
-		<Setter Property="TextElement.FontSize" Value="16" />
-	</Style>
-
-	<Style Selector="TextBlock.fst-italic, TextBox.fst-italic, Run.fst-italic">
-		<Setter Property="TextElement.FontStyle" Value="Italic" />
-	</Style>
-
-	<Style Selector="TextBlock.fst-normal, TextBox.fst-normal, Run.fst-normal">
-		<Setter Property="TextElement.FontStyle" Value="Normal" />
-	</Style>
-
-	<Style Selector="TextBlock.fw-light, TextBox.fw-light, Run.fw-light">
-		<Setter Property="TextElement.FontWeight" Value="Light" />
-	</Style>
-
-	<Style Selector="TextBlock.fw-normal, TextBox.fw-normal, Run.fw-normal">
-		<Setter Property="TextElement.FontWeight" Value="Normal" />
-	</Style>
-
-	<Style Selector="TextBlock.fw-medium, TextBox.fw-medium, Run.fw-medium">
-		<Setter Property="TextElement.FontWeight" Value="Medium" />
-	</Style>
-
-	<Style Selector="TextBlock.fw-semibold, TextBox.fw-semibold, Run.fw-semibold">
-		<Setter Property="TextElement.FontWeight" Value="SemiBold" />
-	</Style>
-
-	<Style Selector="TextBlock.fw-bold, TextBox.fw-bold, Run.fw-bold">
-		<Setter Property="TextElement.FontWeight" Value="Bold" />
-	</Style>
-
-	<Style Selector="TextBlock.lh-1, TextBox.lh-1">
-		<Setter Property="TextBlock.LineHeight" Value="16" />
-	</Style>
-
-	<Style Selector="TextBlock.lh-sm, TextBox.lh-sm">
-		<Setter Property="TextBlock.LineHeight" Value="20" />
-	</Style>
-
-	<Style Selector="TextBlock.lh-base, TextBox.lh-base">
-		<Setter Property="TextBlock.LineHeight" Value="24" />
-	</Style>
-
-	<Style Selector="TextBlock.lh-lg, TextBox.lh-lg">
-		<Setter Property="TextBlock.LineHeight" Value="32" />
-	</Style>
-
-	<Style Selector="TextBlock.text-start">
-		<Setter Property="TextAlignment" Value="Left" />
-	</Style>
-
-	<Style Selector="TextBlock.text-center">
-		<Setter Property="TextAlignment" Value="Center" />
-	</Style>
-
-	<Style Selector="TextBlock.text-end">
-		<Setter Property="TextAlignment" Value="Right" />
-	</Style>
-
-	<Style Selector="TextBlock.text-decoration-underline">
-		<Setter Property="TextDecorations" Value="Underline" />
-	</Style>
-
-	<Style Selector="TextBlock.text-decoration-line-through">
-		<Setter Property="TextDecorations" Value="Strikethrough" />
-	</Style>
-
-	<Style Selector="TextBlock.text-wrap">
-		<Setter Property="TextWrapping" Value="Wrap" />
-	</Style>
-
-	<Style Selector="TextBlock.text-nowrap">
-		<Setter Property="TextWrapping" Value="NoWrap" />
-	</Style>
-
-	<Style Selector="TextBlock.text-break">
-		<Setter Property="TextWrapping" Value="WrapWithOverflow" />
-	</Style>
-
-	<Style Selector="TextBlock.text-primary, TextBox.text-primary, Run.text-primary">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style
-		Selector="TextBlock.text-secondary, TextBox.text-secondary, Run.text-secondary, TextBlock.text-muted, TextBox.text-muted, Run.text-muted, TextBlock.text-body-secondary, TextBox.text-body-secondary, Run.text-body-secondary">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-success, TextBox.text-success, Run.text-success">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsSuccess}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-info, TextBox.text-info, Run.text-info">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsInfo}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-warning, TextBox.text-warning, Run.text-warning">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsWarning}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-danger, TextBox.text-danger, Run.text-danger">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsDanger}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-light, TextBox.text-light, Run.text-light">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsLight}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-dark, TextBox.text-dark, Run.text-dark">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsDark}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-black, TextBox.text-black, Run.text-black">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-white, TextBox.text-white, Run.text-white">
-		<Setter Property="TextElement.Foreground" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style Selector="TextBlock.text-black-50, TextBox.text-black-50, Run.text-black-50">
-		<Setter Property="TextElement.Foreground" Value="#80000000" />
-	</Style>
-
-	<Style Selector="TextBlock.text-white-50, TextBox.text-white-50, Run.text-white-50">
-		<Setter Property="TextElement.Foreground" Value="#80ffffff" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-body, StackPanel.bg-body, Grid.bg-body, Canvas.bg-body, DockPanel.bg-body, WrapPanel.bg-body, Button.bg-body, ContentControl.bg-body, TextBlock.bg-body, TextBox.bg-body, Run.bg-body, ScrollViewer.bg-body, ItemsControl.bg-body, ListBox.bg-body, ListBoxItem.bg-body, ListBox.bg-body, ListBoxItem.bg-body">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsBodyBg}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-body-secondary, StackPanel.bg-body-secondary, Grid.bg-body-secondary, Canvas.bg-body-secondary, DockPanel.bg-body-secondary, WrapPanel.bg-body-secondary, Button.bg-body-secondary, ContentControl.bg-body-secondary, TextBlock.bg-body-secondary, TextBox.bg-body-secondary, Run.bg-body-secondary, ScrollViewer.bg-body-secondary, ItemsControl.bg-body-secondary, ListBox.bg-body-secondary, ListBoxItem.bg-body-secondary, ListBox.bg-body-secondary, ListBoxItem.bg-body-secondary">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsBodySecondary}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-body-tertiary, StackPanel.bg-body-tertiary, Grid.bg-body-tertiary, Canvas.bg-body-tertiary, DockPanel.bg-body-tertiary, WrapPanel.bg-body-tertiary, Button.bg-body-tertiary, ContentControl.bg-body-tertiary, TextBlock.bg-body-tertiary, TextBox.bg-body-tertiary, Run.bg-body-tertiary, ScrollViewer.bg-body-tertiary, ItemsControl.bg-body-tertiary, ListBox.bg-body-tertiary, ListBoxItem.bg-body-tertiary, ListBox.bg-body-tertiary, ListBoxItem.bg-body-tertiary">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsBodyTertiary}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-primary, StackPanel.bg-primary, Grid.bg-primary, Canvas.bg-primary, DockPanel.bg-primary, WrapPanel.bg-primary, Button.bg-primary, ContentControl.bg-primary, TextBlock.bg-primary, TextBox.bg-primary, Run.bg-primary, ScrollViewer.bg-primary, ItemsControl.bg-primary, ListBox.bg-primary, ListBoxItem.bg-primary, ListBox.bg-primary, ListBoxItem.bg-primary">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsPrimary}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-secondary, StackPanel.bg-secondary, Grid.bg-secondary, Canvas.bg-secondary, DockPanel.bg-secondary, WrapPanel.bg-secondary, Button.bg-secondary, ContentControl.bg-secondary, TextBlock.bg-secondary, TextBox.bg-secondary, Run.bg-secondary, ScrollViewer.bg-secondary, ItemsControl.bg-secondary, ListBox.bg-secondary, ListBoxItem.bg-secondary, ListBox.bg-secondary, ListBoxItem.bg-secondary">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsSecondary}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-success, StackPanel.bg-success, Grid.bg-success, Canvas.bg-success, DockPanel.bg-success, WrapPanel.bg-success, Button.bg-success, ContentControl.bg-success, TextBlock.bg-success, TextBox.bg-success, Run.bg-success, ScrollViewer.bg-success, ItemsControl.bg-success, ListBox.bg-success, ListBoxItem.bg-success, ListBox.bg-success, ListBoxItem.bg-success">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsSuccess}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-info, StackPanel.bg-info, Grid.bg-info, Canvas.bg-info, DockPanel.bg-info, WrapPanel.bg-info, Button.bg-info, ContentControl.bg-info, TextBlock.bg-info, TextBox.bg-info, Run.bg-info, ScrollViewer.bg-info, ItemsControl.bg-info, ListBox.bg-info, ListBoxItem.bg-info, ListBox.bg-info, ListBoxItem.bg-info">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsInfo}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-warning, StackPanel.bg-warning, Grid.bg-warning, Canvas.bg-warning, DockPanel.bg-warning, WrapPanel.bg-warning, Button.bg-warning, ContentControl.bg-warning, TextBlock.bg-warning, TextBox.bg-warning, Run.bg-warning, ScrollViewer.bg-warning, ItemsControl.bg-warning, ListBox.bg-warning, ListBoxItem.bg-warning, ListBox.bg-warning, ListBoxItem.bg-warning">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsWarning}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-danger, StackPanel.bg-danger, Grid.bg-danger, Canvas.bg-danger, DockPanel.bg-danger, WrapPanel.bg-danger, Button.bg-danger, ContentControl.bg-danger, TextBlock.bg-danger, TextBox.bg-danger, Run.bg-danger, ScrollViewer.bg-danger, ItemsControl.bg-danger, ListBox.bg-danger, ListBoxItem.bg-danger, ListBox.bg-danger, ListBoxItem.bg-danger">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsDanger}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-light, StackPanel.bg-light, Grid.bg-light, Canvas.bg-light, DockPanel.bg-light, WrapPanel.bg-light, Button.bg-light, ContentControl.bg-light, TextBlock.bg-light, TextBox.bg-light, Run.bg-light, ScrollViewer.bg-light, ItemsControl.bg-light, ListBox.bg-light, ListBoxItem.bg-light, ListBox.bg-light, ListBoxItem.bg-light">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsLight}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-dark, StackPanel.bg-dark, Grid.bg-dark, Canvas.bg-dark, DockPanel.bg-dark, WrapPanel.bg-dark, Button.bg-dark, ContentControl.bg-dark, TextBlock.bg-dark, TextBox.bg-dark, Run.bg-dark, ScrollViewer.bg-dark, ItemsControl.bg-dark, ListBox.bg-dark, ListBoxItem.bg-dark, ListBox.bg-dark, ListBoxItem.bg-dark">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsDark}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-black, StackPanel.bg-black, Grid.bg-black, Canvas.bg-black, DockPanel.bg-black, WrapPanel.bg-black, Button.bg-black, ContentControl.bg-black, TextBlock.bg-black, TextBox.bg-black, Run.bg-black, ScrollViewer.bg-black, ItemsControl.bg-black, ListBox.bg-black, ListBoxItem.bg-black, ListBox.bg-black, ListBoxItem.bg-black">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsBlack}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-white, StackPanel.bg-white, Grid.bg-white, Canvas.bg-white, DockPanel.bg-white, WrapPanel.bg-white, Button.bg-white, ContentControl.bg-white, TextBlock.bg-white, TextBox.bg-white, Run.bg-white, ScrollViewer.bg-white, ItemsControl.bg-white, ListBox.bg-white, ListBoxItem.bg-white, ListBox.bg-white, ListBoxItem.bg-white">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsBodyColor}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-transparent, StackPanel.bg-transparent, Grid.bg-transparent, Canvas.bg-transparent, DockPanel.bg-transparent, WrapPanel.bg-transparent, Button.bg-transparent, ContentControl.bg-transparent, TextBlock.bg-transparent, TextBox.bg-transparent, Run.bg-transparent, ScrollViewer.bg-transparent, ItemsControl.bg-transparent, ListBox.bg-transparent, ListBoxItem.bg-transparent, ListBox.bg-transparent, ListBoxItem.bg-transparent">
-		<Setter Property="TemplatedControl.Background" Value="Transparent" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-primary-subtle, StackPanel.bg-primary-subtle, Grid.bg-primary-subtle, Canvas.bg-primary-subtle, DockPanel.bg-primary-subtle, WrapPanel.bg-primary-subtle, Button.bg-primary-subtle, ContentControl.bg-primary-subtle, TextBlock.bg-primary-subtle, TextBox.bg-primary-subtle, Run.bg-primary-subtle, ScrollViewer.bg-primary-subtle, ItemsControl.bg-primary-subtle, ListBox.bg-primary-subtle, ListBoxItem.bg-primary-subtle, ListBox.bg-primary-subtle, ListBoxItem.bg-primary-subtle">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsInfoTextEmphasis}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-success-subtle, StackPanel.bg-success-subtle, Grid.bg-success-subtle, Canvas.bg-success-subtle, DockPanel.bg-success-subtle, WrapPanel.bg-success-subtle, Button.bg-success-subtle, ContentControl.bg-success-subtle, TextBlock.bg-success-subtle, TextBox.bg-success-subtle, Run.bg-success-subtle, ScrollViewer.bg-success-subtle, ItemsControl.bg-success-subtle, ListBox.bg-success-subtle, ListBoxItem.bg-success-subtle, ListBox.bg-success-subtle, ListBoxItem.bg-success-subtle">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsSuccessTextEmphasis}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-danger-subtle, StackPanel.bg-danger-subtle, Grid.bg-danger-subtle, Canvas.bg-danger-subtle, DockPanel.bg-danger-subtle, WrapPanel.bg-danger-subtle, Button.bg-danger-subtle, ContentControl.bg-danger-subtle, TextBlock.bg-danger-subtle, TextBox.bg-danger-subtle, Run.bg-danger-subtle, ScrollViewer.bg-danger-subtle, ItemsControl.bg-danger-subtle, ListBox.bg-danger-subtle, ListBoxItem.bg-danger-subtle, ListBox.bg-danger-subtle, ListBoxItem.bg-danger-subtle">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsDarkTextEmphasis}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-warning-subtle, StackPanel.bg-warning-subtle, Grid.bg-warning-subtle, Canvas.bg-warning-subtle, DockPanel.bg-warning-subtle, WrapPanel.bg-warning-subtle, Button.bg-warning-subtle, ContentControl.bg-warning-subtle, TextBlock.bg-warning-subtle, TextBox.bg-warning-subtle, Run.bg-warning-subtle, ScrollViewer.bg-warning-subtle, ItemsControl.bg-warning-subtle, ListBox.bg-warning-subtle, ListBoxItem.bg-warning-subtle, ListBox.bg-warning-subtle, ListBoxItem.bg-warning-subtle">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsWarningTextEmphasis}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-info-subtle, StackPanel.bg-info-subtle, Grid.bg-info-subtle, Canvas.bg-info-subtle, DockPanel.bg-info-subtle, WrapPanel.bg-info-subtle, Button.bg-info-subtle, ContentControl.bg-info-subtle, TextBlock.bg-info-subtle, TextBox.bg-info-subtle, Run.bg-info-subtle, ScrollViewer.bg-info-subtle, ItemsControl.bg-info-subtle, ListBox.bg-info-subtle, ListBoxItem.bg-info-subtle, ListBox.bg-info-subtle, ListBoxItem.bg-info-subtle">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsInfoTextEmphasis}" />
-	</Style>
-
-	<Style
-		Selector="Border.bg-dark-subtle, StackPanel.bg-dark-subtle, Grid.bg-dark-subtle, Canvas.bg-dark-subtle, DockPanel.bg-dark-subtle, WrapPanel.bg-dark-subtle, Button.bg-dark-subtle, ContentControl.bg-dark-subtle, TextBlock.bg-dark-subtle, TextBox.bg-dark-subtle, Run.bg-dark-subtle, ScrollViewer.bg-dark-subtle, ItemsControl.bg-dark-subtle, ListBox.bg-dark-subtle, ListBoxItem.bg-dark-subtle, ListBox.bg-dark-subtle, ListBoxItem.bg-dark-subtle">
-		<Setter Property="TemplatedControl.Background" Value="{DynamicResource BsLightTextEmphasis}" />
-	</Style>
-
-	<Style
-		Selector="Border.visible, StackPanel.visible, Grid.visible, Canvas.visible, DockPanel.visible, WrapPanel.visible, Button.visible, ContentControl.visible, TextBlock.text-visible, TextBox.text-visible, Run.text-visible, ScrollViewer.visible, ItemsControl.visible, ListBox.visible, ListBoxItem.visible, ListBox.visible, ListBoxItem.visible">
-		<Setter Property="TemplatedControl.IsVisible" Value="True" />
-		<Setter Property="TemplatedControl.Opacity" Value="1" />
-	</Style>
-
-	<Style
-		Selector="Border.invisible, StackPanel.invisible, Grid.invisible, Canvas.invisible, DockPanel.invisible, WrapPanel.invisible, Button.invisible, ContentControl.invisible, TextBlock.invisible, TextBox.invisible, Run.invisible, ScrollViewer.invisible, ItemsControl.invisible, ListBox.invisible, ListBoxItem.invisible, ListBox.invisible, ListBoxItem.invisible">
-		<Setter Property="TemplatedControl.Opacity" Value="0" />
-	</Style>
-
-	<Style
-		Selector="Border.z-n1, StackPanel.z-n1, Grid.z-n1, Canvas.z-n1, DockPanel.z-n1, WrapPanel.z-n1, Button.z-n1, ContentControl.z-n1, TextBlock.z-n1, TextBox.z-n1, Run.z-n1, ScrollViewer.z-n1, ItemsControl.z-n1, ListBox.z-n1, ListBoxItem.z-n1, ListBox.z-n1, ListBoxItem.z-n1">
-		<Setter Property="TemplatedControl.ZIndex" Value="-1" />
-	</Style>
-
-	<Style
-		Selector="Border.z-0, StackPanel.z-0, Grid.z-0, Canvas.z-0, DockPanel.z-0, WrapPanel.z-0, Button.z-0, ContentControl.z-0, TextBlock.z-0, TextBox.z-0, Run.z-0, ScrollViewer.z-0, ItemsControl.z-0, ListBox.z-0, ListBoxItem.z-0, ListBox.z-0, ListBoxItem.z-0">
-		<Setter Property="TemplatedControl.ZIndex" Value="0" />
-	</Style>
-
-	<Style
-		Selector="Border.z-1, StackPanel.z-1, Grid.z-1, Canvas.z-1, DockPanel.z-1, WrapPanel.z-1, Button.z-1, ContentControl.z-1, TextBlock.z-1, TextBox.z-1, Run.z-1, ScrollViewer.z-1, ItemsControl.z-1, ListBox.z-1, ListBoxItem.z-1, ListBox.z-1, ListBoxItem.z-1">
-		<Setter Property="TemplatedControl.ZIndex" Value="1" />
-	</Style>
-
-	<Style
-		Selector="Border.z-2, StackPanel.z-2, Grid.z-2, Canvas.z-2, DockPanel.z-2, WrapPanel.z-2, Button.z-2, ContentControl.z-2, TextBlock.z-2, TextBox.z-2, Run.z-2, ScrollViewer.z-2, ItemsControl.z-2, ListBox.z-2, ListBoxItem.z-2, ListBox.z-2, ListBoxItem.z-2">
-		<Setter Property="TemplatedControl.ZIndex" Value="2" />
-	</Style>
-
-	<Style
-		Selector="Border.z-3, StackPanel.z-3, Grid.z-3, Canvas.z-3, DockPanel.z-3, WrapPanel.z-3, Button.z-3, ContentControl.z-3, TextBlock.z-3, TextBox.z-3, Run.z-3, ScrollViewer.z-3, ItemsControl.z-3, ListBox.z-3, ListBoxItem.z-3, ListBox.z-3, ListBoxItem.z-3">
-		<Setter Property="TemplatedControl.ZIndex" Value="3" />
-	</Style>
-
-	<Style
-		Selector="Border, StackPanel, Grid, Canvas, DockPanel, WrapPanel, Button, ContentControl, TextBlock, TextBox, Run, ScrollViewer, ItemsControl, ListBox, ListBoxItem, ListBox, ListBoxItem">
-		<Setter Property="behaviours:Utilities.Enable" Value="True"/>
-	</Style>
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:styles="clr-namespace:Bootstrap.Avalonia.Toolkit.Styles">
+
+  <Styles.Resources>
+    <SolidColorBrush x:Key="BsBlue" Color="#0d6efd" />
+    <SolidColorBrush x:Key="BsIndigo" Color="#6610f2" />
+    <SolidColorBrush x:Key="BsPurple" Color="#6f42c1" />
+    <SolidColorBrush x:Key="BsPink" Color="#d63384" />
+    <SolidColorBrush x:Key="BsRed" Color="#dc3545" />
+    <SolidColorBrush x:Key="BsOrange" Color="#fd7e14" />
+    <SolidColorBrush x:Key="BsYellow" Color="#ffc107" />
+    <SolidColorBrush x:Key="BsGreen" Color="#198754" />
+    <SolidColorBrush x:Key="BsTeal" Color="#20c997" />
+    <SolidColorBrush x:Key="BsCyan" Color="#0dcaf0" />
+    <SolidColorBrush x:Key="BsBlack" Color="#000000" />
+    <SolidColorBrush x:Key="BsWhite" Color="#ffffff" />
+
+    <SolidColorBrush x:Key="BsGray" Color="#6c757d" />
+    <SolidColorBrush x:Key="BsGrayDark" Color="#343a40" />
+    <SolidColorBrush x:Key="BsGray100" Color="#f8f9fa" />
+    <SolidColorBrush x:Key="BsGray200" Color="#e9ecef" />
+    <SolidColorBrush x:Key="BsGray300" Color="#dee2e6" />
+    <SolidColorBrush x:Key="BsGray400" Color="#ced4da" />
+    <SolidColorBrush x:Key="BsGray500" Color="#adb5bd" />
+    <SolidColorBrush x:Key="BsGray600" Color="#6c757d" />
+    <SolidColorBrush x:Key="BsGray700" Color="#495057" />
+    <SolidColorBrush x:Key="BsGray800" Color="#343a40" />
+    <SolidColorBrush x:Key="BsGray900" Color="#212529" />
+
+    <SolidColorBrush x:Key="BsPrimary" Color="#0d6efd" />
+    <SolidColorBrush x:Key="BsSecondary" Color="#6c757d" />
+    <SolidColorBrush x:Key="BsSuccess" Color="#198754" />
+    <SolidColorBrush x:Key="BsInfo" Color="#0dcaf0" />
+    <SolidColorBrush x:Key="BsWarning" Color="#ffc107" />
+    <SolidColorBrush x:Key="BsDanger" Color="#dc3545" />
+    <SolidColorBrush x:Key="BsLight" Color="#f8f9fa" />
+    <SolidColorBrush x:Key="BsDark" Color="#212529" />
+
+    <SolidColorBrush x:Key="BsPrimaryTextEmphasis" Color="#052c65" />
+    <SolidColorBrush x:Key="BsSecondaryTextEmphasis" Color="#2b2f32" />
+    <SolidColorBrush x:Key="BsSuccessTextEmphasis" Color="#0a3622" />
+    <SolidColorBrush x:Key="BsInfoTextEmphasis" Color="#055160" />
+    <SolidColorBrush x:Key="BsWarningTextEmphasis" Color="#664d03" />
+    <SolidColorBrush x:Key="BsDangerTextEmphasis" Color="#58151c" />
+    <SolidColorBrush x:Key="BsLightTextEmphasis" Color="#495057" />
+    <SolidColorBrush x:Key="BsDarkTextEmphasis" Color="#495057" />
+
+    <SolidColorBrush x:Key="BsPrimaryBgSubtle" Color="#cfe2ff" />
+    <SolidColorBrush x:Key="BsSecondaryBgSubtle" Color="#e2e3e5" />
+    <SolidColorBrush x:Key="BsSuccessBgSubtle" Color="#d1e7dd" />
+    <SolidColorBrush x:Key="BsInfoBgSubtle" Color="#cff4fc" />
+    <SolidColorBrush x:Key="BsWarningBgSubtle" Color="#fff3cd" />
+    <SolidColorBrush x:Key="BsDangerBgSubtle" Color="#f8d7da" />
+    <SolidColorBrush x:Key="BsLightBgSubtle" Color="#fcfcfd" />
+    <SolidColorBrush x:Key="BsDarkBgSubtle" Color="#ced4da" />
+
+    <SolidColorBrush x:Key="BsPrimaryBorderSubtle" Color="#9ec5fe" />
+    <SolidColorBrush x:Key="BsSecondaryBorderSubtle" Color="#c4c8cb" />
+    <SolidColorBrush x:Key="BsSuccessBorderSubtle" Color="#a3cfbb" />
+    <SolidColorBrush x:Key="BsInfoBorderSubtle" Color="#9eeaf9" />
+    <SolidColorBrush x:Key="BsWarningBorderSubtle" Color="#ffe69c" />
+    <SolidColorBrush x:Key="BsDangerBorderSubtle" Color="#f1aeb5" />
+    <SolidColorBrush x:Key="BsLightBorderSubtle" Color="#e9ecef" />
+    <SolidColorBrush x:Key="BsDarkBorderSubtle" Color="#adb5bd" />
+
+    <FontFamily x:Key="BsFontSansSerif">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
+    <FontFamily x:Key="BsFontMonospace">"SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Monospace</FontFamily>
+
+    <FontFamily x:Key="BsBodyFontFamily">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
+    <system:Double x:Key="BsBodyFontSize">14</system:Double>
+    <FontWeight x:Key="BsBodyFontWeight">Normal</FontWeight>
+    <system:Double x:Key="BsBodyLineHeight">24</system:Double>
+
+    <SolidColorBrush x:Key="BsBodyColor" Color="#212529" />
+    <SolidColorBrush x:Key="BsBodyBg" Color="#ffffff" />
+    
+    <SolidColorBrush x:Key="BsSecondaryColor" Color="#54595d" />
+    <SolidColorBrush x:Key="BsSecondaryBg" Color="#e9ecef" />
+    
+    <SolidColorBrush x:Key="BsTertiaryColor" Color="#7f7f7f" />
+    <SolidColorBrush x:Key="BsTertiaryBg" Color="#f8f9fa" />
+    
+    <SolidColorBrush x:Key="BsLinkColor" Color="#0d6efd" />
+    <SolidColorBrush x:Key="BsLinkHoverColor" Color="#0a58ca" />
+    
+    <SolidColorBrush x:Key="BsCodeColor" Color="#d63384" />
+    
+    <SolidColorBrush x:Key="BsHighlightColor" Color="#212529" />
+    <SolidColorBrush x:Key="BsHighlightBg" Color="#fff3cd" />
+    
+    <SolidColorBrush x:Key="BsBorderColor" Color="#dee2e6" />
+    <SolidColorBrush x:Key="BsBorderColorTranslucent" Color="#2c2c2c2c" />
+
+    <system:Double x:Key="BsFocusRingWidth">4</system:Double>
+    <SolidColorBrush x:Key="BsFocusRingColor" Color="#400d6efd" />
+
+    <SolidColorBrush x:Key="BsFormValidColor" Color="#198754" />
+    <SolidColorBrush x:Key="BsFormValidBorderColor" Color="#198754" />
+    <SolidColorBrush x:Key="BsFormInvalidColor" Color="#dc3545" />
+    <SolidColorBrush x:Key="BsFormInvalidBorderColor" Color="#dc3545" />
+  </Styles.Resources>
+
+  <Style Selector="Window.body">
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="FontFamily" Value="{DynamicResource BsFontSansSerif}" />
+    <Setter Property="FontSize" Value="{DynamicResource BsBodyFontSize}" />
+    <Setter Property="FontWeight" Value="{DynamicResource BsBodyFontWeight}" />
+    <Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
+    <Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
+    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+    <Setter Property="TextBlock.LineHeight" Value="24" />
+  </Style>
+
+  <Style Selector="TextBlock.mark, Run.mark">
+    <Setter Property="TextElement.Background" Value="{DynamicResource BsHighlightBg}" />
+    <Setter Property="TextElement.Foreground" Value="{DynamicResource BsHighlightColor}" />
+  </Style>
+
+  <Style Selector="TextBlock.del">
+    <Setter Property="TextDecorations" Value="Strikethrough" />
+  </Style>
+
+  <Style Selector="Run.sub">
+    <Setter Property="BaselineAlignment" Value="Subscript" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+
+  <Style Selector="Run.sup">
+    <Setter Property="BaselineAlignment" Value="Superscript" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+
+  <Style Selector="TextBlock.lead">
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="FontWeight" Value="Light" />
+  </Style>
+
+  <Style Selector="Button.a">
+    <Setter Property="Foreground" Value="{DynamicResource BsLinkColor}" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+  </Style>
+
+  <Style Selector="Button.a:pointerover /template/ ContentPresenter">
+    <Setter Property="Foreground" Value="{DynamicResource BsLinkHoverColor}" />
+    <Setter Property="Background" Value="Transparent" />
+  </Style>
+
+  <Style Selector="Border.kbd">
+    <Setter Property="Background" Value="{DynamicResource BsBodyColor}" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="Padding" Value="6,3" />
+  </Style>
+
+  <Style Selector="Border.kbd TextBlock">
+    <Setter Property="Foreground" Value="{DynamicResource BsBodyBg}" />
+    <Setter Property="FontSize" Value="14" />
+  </Style>
+
+  <Style Selector="Border.pre">
+    <Setter Property="Margin" Value="0,0,0,16" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+  </Style>
+
+  <Style Selector="Label">
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+
+  <Style Selector="TextBox, Button, ComboBox, TextBox.textarea">
+    <Setter Property="Margin" Value="0" />
+    <Setter Property="FontFamily" Value="{DynamicResource BsBodyFontFamily}" />
+    <Setter Property="FontSize" Value="{DynamicResource BsBodyFontSize}" />
+  </Style>
+
+  <Style Selector="Button">
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Cursor" Value="Hand" />
+  </Style>
+
+  <Style Selector="Button:disabled">
+    <Setter Property="Cursor" Value="Arrow" />
+  </Style>
+
+  <Style Selector="Label.form-label">
+    <Setter Property="Margin" Value="0,0,0,8" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="FontWeight" Value="Normal" />
+  </Style>
+
+  <Style Selector="TextBlock.form-text">
+    <Setter Property="Margin" Value="0,4,0,0" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Foreground" Value="{DynamicResource BsSecondaryColor}" />
+  </Style>
+
+  <Style Selector="TextBox.form-control">
+    <Setter Property="Padding" Value="12,6" />
+    <Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
+    <Setter Property="Transitions">
+      <Transitions>
+        <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+      </Transitions>
+    </Setter>
+  </Style>
+
+  <Style Selector="TextBox.form-control:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
+    <Setter Property="BoxShadow" Value="0 0 0 4 #400d6efd" />
+  </Style>
+
+  <Style Selector="TextBox.form-control-sm">
+    <Setter Property="Padding" Value="8,4" />
+    <Setter Property="FontSize" Value="14" />
+  </Style>
+
+  <Style Selector="TextBox.form-control-lg">
+    <Setter Property="Padding" Value="16,8" />
+    <Setter Property="FontSize" Value="20" />
+  </Style>
+
+  <Style Selector="ComboBox.form-select">
+    <Setter Property="Padding" Value="12,6,36,6" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="CornerRadius" Value="6" />
+  </Style>
+
+  <Style Selector="ComboBox.form-select:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
+  </Style>
+
+  <Style Selector="CheckBox.form-check-input">
+    <Setter Property="MinWidth" Value="0" />
+    <Setter Property="Padding" Value="8,0" />
+  </Style>
+
+  <Style Selector="CheckBox.form-check-input:checked /template/ Border#NormalRectangle">
+    <Setter Property="Background" Value="{DynamicResource BsPrimary}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BsPrimary}" />
+  </Style>
+
+  <Style Selector="ToggleSwitch.form-switch">
+    <Setter Property="OnContent" Value="" />
+    <Setter Property="OffContent" Value="" />
+  </Style>
+
+  <Style Selector="Slider.form-range">
+    <Setter Property="Background" Value="{DynamicResource BsSecondaryBg}" />
+  </Style>
+
+  <Style Selector="Slider.form-range /template/ Thumb">
+    <Setter Property="Background" Value="{DynamicResource BsPrimary}" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Width" Value="16" />
+    <Setter Property="Height" Value="16" />
+    <Setter Property="CornerRadius" Value="16" />
+    <Setter Property="Transitions">
+      <Transitions>
+        <BrushTransition Property="Background" Duration="0:0:0.15" />
+      </Transitions>
+    </Setter>
+  </Style>
+
+  <Style Selector="Slider.form-range /template/ Thumb:pressed">
+    <Setter Property="Background" Value="#b6d4fe" />
+  </Style>
+
+  <Style Selector="Slider.form-range /template/ RepeatButton#PART_SelectionRangeBackground">
+    <Setter Property="Background" Value="{DynamicResource BsPrimary}" />
+    <Setter Property="Height" Value="8" />
+    <Setter Property="CornerRadius" Value="8" />
+  </Style>
+
+  <Style Selector="TextBox.form-floating">
+    <Setter Property="MinHeight" Value="58" />
+    <Setter Property="Padding" Value="12,26,12,6" />
+  </Style>
+
+  <Style Selector="Border.input-group">
+    <Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="{DynamicResource BsBorderRadius}" />
+    <Setter Property="ClipToBounds" Value="True" />
+    <Setter Property="Background" Value="{DynamicResource BsBodyBg}" />
+  </Style>
+
+  <Style Selector="Border.input-group > Grid">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+  </Style>
+
+  <Style Selector="Border.input-group-text">
+    <Setter Property="Background" Value="{DynamicResource BsTertiaryBg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BsBorderColor}" />
+    <Setter Property="BorderThickness" Value="0,0,1,0" />
+    <Setter Property="Padding" Value="12,6" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+  </Style>
+
+  <Style Selector="Border.input-group TextBox">
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="FocusAdorner" Value="{x:Null}" />
+    <Setter Property="MinHeight" Value="0" />
+  </Style>
+
+  <Style Selector="Border.input-group:focus-within">
+    <Setter Property="BorderBrush" Value="#86b7fe" />
+    <Setter Property="BoxShadow" Value="0 0 0 4 #400d6efd" />
+  </Style>
+
+  <Style Selector="Border.input-group-sm">
+    <Setter Property="CornerRadius" Value="4" />
+  </Style>
+  <Style Selector="Border.input-group-sm TextBlock, Border.input-group-sm TextBox, Border.input-group-sm Button, Border.input-group-sm Border">
+    <Setter Property="TemplatedControl.Padding" Value="8,4" />
+    <Setter Property="TextBlock.FontSize" Value="14" />
+  </Style>
+
+  <Style Selector="Border.input-group-lg">
+    <Setter Property="CornerRadius" Value="8" />
+  </Style>
+  <Style Selector="Border.input-group-lg TextBlock, Border.input-group-lg TextBox, Border.input-group-lg Button, Border.input-group-lg Border">
+    <Setter Property="TemplatedControl.Padding" Value="16,8" />
+    <Setter Property="TextBlock.FontSize" Value="20" />
+  </Style>
+
+  <Style Selector="Button.btn">
+    <Setter Property="Padding" Value="12,6" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="FontSize" Value="{DynamicResource BsBodyFontSize}" />
+    <Setter Property="FontWeight" Value="Normal" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="CornerRadius" Value="{DynamicResource BsBorderRadius}" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Transitions">
+      <Transitions>
+        <BrushTransition Property="Background" Duration="0:0:0.15" />
+        <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+        <BrushTransition Property="Foreground" Duration="0:0:0.15" />
+      </Transitions>
+    </Setter>
+  </Style>
+
+  <Style Selector="Button.btn:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Foreground" Value="{DynamicResource BsBodyColor}" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+  </Style>
+
+  <Style Selector="Button.btn:disabled">
+    <Setter Property="Opacity" Value="0.65" />
+  </Style>
+
+  <Style Selector="Button.btn-lg">
+    <Setter Property="Padding" Value="16,8" />
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="CornerRadius" Value="8" />
+  </Style>
+
+  <Style Selector="Button.btn-sm">
+    <Setter Property="Padding" Value="8,4" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="CornerRadius" Value="4" />
+  </Style>
+
+  <Style Selector="Grid.btn-group">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+  </Style>
+
+  <Style Selector="Grid.btn-group > Button">
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Padding" Value="12,6" />
+    <Setter Property="Margin" Value="-1,0,0,0" />
+  </Style>
+
+  <Style Selector="Grid.btn-group > Button:nth-child(1)">
+    <Setter Property="CornerRadius" Value="4,0,0,4" />
+    <Setter Property="Margin" Value="0" />
+  </Style>
+
+  <Style Selector="Grid.btn-group > Button:nth-last-child(1)">
+    <Setter Property="CornerRadius" Value="0,4,4,0" />
+  </Style>
+
+  <Style Selector="Grid.btn-group > Button:pointerover, Grid.btn-group > Button:pressed">
+    <Setter Property="ZIndex" Value="1" />
+  </Style>
+
+  <Style Selector="TextBlock.text-truncate">
+    <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+    <Setter Property="TextWrapping" Value="NoWrap" />
+  </Style>
+
+  <Style Selector="TextBlock.lh-1, TextBox.lh-1">
+    <Setter Property="TextBlock.LineHeight" Value="16" />
+  </Style>
+  <Style Selector="TextBlock.lh-sm, TextBox.lh-sm">
+    <Setter Property="TextBlock.LineHeight" Value="20" />
+  </Style>
+  <Style Selector="TextBlock.lh-base, TextBox.lh-base">
+    <Setter Property="TextBlock.LineHeight" Value="24" />
+  </Style>
+  <Style Selector="TextBlock.lh-lg, TextBox.lh-lg">
+    <Setter Property="TextBlock.LineHeight" Value="32" />
+  </Style>
+
+  <Style Selector="TextBlock.text-start">
+    <Setter Property="TextAlignment" Value="Left" />
+  </Style>
+  <Style Selector="TextBlock.text-wrap">
+    <Setter Property="TextWrapping" Value="Wrap" />
+  </Style>
+  <Style Selector="TextBlock.text-nowrap">
+    <Setter Property="TextWrapping" Value="NoWrap" />
+  </Style>
+  <Style Selector="TextBlock.text-break">
+    <Setter Property="TextWrapping" Value="WrapWithOverflow" />
+  </Style>
+
+  <Style Selector=":is(Control)">
+    <Setter Property="styles:BsOpacity.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsMargin.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsAlignSelf.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsTypography.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsPadding.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsBackground.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsBorder.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsRounded.IsEnabled" Value="True"/>
+    <Setter Property="styles:BsButton.IsEnabled" Value="True"/>
+  </Style>
 </Styles>

@@ -45,9 +45,4 @@
         </AvaloniaResource>
     </ItemGroup>
 
-    <ItemGroup>
-      <Reference Include="System.Runtime" />
-    </ItemGroup>
-
-
 </Project>

@@ -1,116 +1,105 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:system="clr-namespace:System;assembly=System.Runtime">
+        xmlns:system="clr-namespace:System;assembly=mscorlib">
 	
-	<Styles.Resources>
-	<SolidColorBrush x:Key="BsBlue" Color="#0d6efd" />
-		<SolidColorBrush x:Key="BsIndigo" Color="#6610f2" />
-		<SolidColorBrush x:Key="BsPurple" Color="#6f42c1" />
-		<SolidColorBrush x:Key="BsPink" Color="#d63384" />
-		<SolidColorBrush x:Key="BsRed" Color="#dc3545" />
-		<SolidColorBrush x:Key="BsOrange" Color="#fd7e14" />
-		<SolidColorBrush x:Key="BsYellow" Color="#ffc107" />
-		<SolidColorBrush x:Key="BsGreen" Color="#198754" />
-		<SolidColorBrush x:Key="BsTeal" Color="#20c997" />
-		<SolidColorBrush x:Key="BsCyan" Color="#0dcaf0" />
-		<SolidColorBrush x:Key="BsBlack" Color="#000000" />
-		<SolidColorBrush x:Key="BsWhite" Color="#ffffff" />
+  <Styles.Resources>
+    <SolidColorBrush x:Key="BsBlue" Color="#0d6efd" />
+    <SolidColorBrush x:Key="BsIndigo" Color="#6610f2" />
+    <SolidColorBrush x:Key="BsPurple" Color="#6f42c1" />
+    <SolidColorBrush x:Key="BsPink" Color="#d63384" />
+    <SolidColorBrush x:Key="BsRed" Color="#dc3545" />
+    <SolidColorBrush x:Key="BsOrange" Color="#fd7e14" />
+    <SolidColorBrush x:Key="BsYellow" Color="#ffc107" />
+    <SolidColorBrush x:Key="BsGreen" Color="#198754" />
+    <SolidColorBrush x:Key="BsTeal" Color="#20c997" />
+    <SolidColorBrush x:Key="BsCyan" Color="#0dcaf0" />
+    <SolidColorBrush x:Key="BsBlack" Color="#000000" />
+    <SolidColorBrush x:Key="BsWhite" Color="#ffffff" />
 
-		<SolidColorBrush x:Key="BsGray" Color="#6c757d" />
-		<SolidColorBrush x:Key="BsGrayDark" Color="#343a40" />
-		<SolidColorBrush x:Key="BsGray100" Color="#f8f9fa" />
-		<SolidColorBrush x:Key="BsGray200" Color="#e9ecef" />
-		<SolidColorBrush x:Key="BsGray300" Color="#dee2e6" />
-		<SolidColorBrush x:Key="BsGray400" Color="#ced4da" />
-		<SolidColorBrush x:Key="BsGray500" Color="#adb5bd" />
-		<SolidColorBrush x:Key="BsGray600" Color="#6c757d" />
-		<SolidColorBrush x:Key="BsGray700" Color="#495057" />
-		<SolidColorBrush x:Key="BsGray800" Color="#343a40" />
-		<SolidColorBrush x:Key="BsGray900" Color="#212529" />
+    <SolidColorBrush x:Key="BsGray" Color="#6c757d" />
+    <SolidColorBrush x:Key="BsGrayDark" Color="#343a40" />
+    <SolidColorBrush x:Key="BsGray100" Color="#f8f9fa" />
+    <SolidColorBrush x:Key="BsGray200" Color="#e9ecef" />
+    <SolidColorBrush x:Key="BsGray300" Color="#dee2e6" />
+    <SolidColorBrush x:Key="BsGray400" Color="#ced4da" />
+    <SolidColorBrush x:Key="BsGray500" Color="#adb5bd" />
+    <SolidColorBrush x:Key="BsGray600" Color="#6c757d" />
+    <SolidColorBrush x:Key="BsGray700" Color="#495057" />
+    <SolidColorBrush x:Key="BsGray800" Color="#343a40" />
+    <SolidColorBrush x:Key="BsGray900" Color="#212529" />
 
-		<SolidColorBrush x:Key="BsPrimary" Color="#0d6efd" />
-		<SolidColorBrush x:Key="BsSecondary" Color="#6c757d" />
-		<SolidColorBrush x:Key="BsSuccess" Color="#198754" />
-		<SolidColorBrush x:Key="BsInfo" Color="#0dcaf0" />
-		<SolidColorBrush x:Key="BsWarning" Color="#ffc107" />
-		<SolidColorBrush x:Key="BsDanger" Color="#dc3545" />
-		<SolidColorBrush x:Key="BsLight" Color="#f8f9fa" />
-		<SolidColorBrush x:Key="BsDark" Color="#212529" />
+    <SolidColorBrush x:Key="BsPrimary" Color="#0d6efd" />
+    <SolidColorBrush x:Key="BsSecondary" Color="#6c757d" />
+    <SolidColorBrush x:Key="BsSuccess" Color="#198754" />
+    <SolidColorBrush x:Key="BsInfo" Color="#0dcaf0" />
+    <SolidColorBrush x:Key="BsWarning" Color="#ffc107" />
+    <SolidColorBrush x:Key="BsDanger" Color="#dc3545" />
+    <SolidColorBrush x:Key="BsLight" Color="#f8f9fa" />
+    <SolidColorBrush x:Key="BsDark" Color="#212529" />
 
-		<SolidColorBrush x:Key="BsPrimaryTextEmphasis" Color="#052c65" />
-		<SolidColorBrush x:Key="BsSecondaryTextEmphasis" Color="#2b2f32" />
-		<SolidColorBrush x:Key="BsSuccessTextEmphasis" Color="#0a3622" />
-		<SolidColorBrush x:Key="BsInfoTextEmphasis" Color="#055160" />
-		<SolidColorBrush x:Key="BsWarningTextEmphasis" Color="#664d03" />
-		<SolidColorBrush x:Key="BsDangerTextEmphasis" Color="#58151c" />
-		<SolidColorBrush x:Key="BsLightTextEmphasis" Color="#495057" />
-		<SolidColorBrush x:Key="BsDarkTextEmphasis" Color="#495057" />
+    <SolidColorBrush x:Key="BsPrimaryTextEmphasis" Color="#052c65" />
+    <SolidColorBrush x:Key="BsSecondaryTextEmphasis" Color="#2b2f32" />
+    <SolidColorBrush x:Key="BsSuccessTextEmphasis" Color="#0a3622" />
+    <SolidColorBrush x:Key="BsInfoTextEmphasis" Color="#055160" />
+    <SolidColorBrush x:Key="BsWarningTextEmphasis" Color="#664d03" />
+    <SolidColorBrush x:Key="BsDangerTextEmphasis" Color="#58151c" />
+    <SolidColorBrush x:Key="BsLightTextEmphasis" Color="#495057" />
+    <SolidColorBrush x:Key="BsDarkTextEmphasis" Color="#495057" />
 
-		<SolidColorBrush x:Key="BsPrimaryBgSubtle" Color="#cfe2ff" />
-		<SolidColorBrush x:Key="BsSecondaryBgSubtle" Color="#e2e3e5" />
-		<SolidColorBrush x:Key="BsSuccessBgSubtle" Color="#d1e7dd" />
-		<SolidColorBrush x:Key="BsInfoBgSubtle" Color="#cff4fc" />
-		<SolidColorBrush x:Key="BsWarningBgSubtle" Color="#fff3cd" />
-		<SolidColorBrush x:Key="BsDangerBgSubtle" Color="#f8d7da" />
-		<SolidColorBrush x:Key="BsLightBgSubtle" Color="#fcfcfd" />
-		<SolidColorBrush x:Key="BsDarkBgSubtle" Color="#ced4da" />
+    <SolidColorBrush x:Key="BsPrimaryBgSubtle" Color="#cfe2ff" />
+    <SolidColorBrush x:Key="BsSecondaryBgSubtle" Color="#e2e3e5" />
+    <SolidColorBrush x:Key="BsSuccessBgSubtle" Color="#d1e7dd" />
+    <SolidColorBrush x:Key="BsInfoBgSubtle" Color="#cff4fc" />
+    <SolidColorBrush x:Key="BsWarningBgSubtle" Color="#fff3cd" />
+    <SolidColorBrush x:Key="BsDangerBgSubtle" Color="#f8d7da" />
+    <SolidColorBrush x:Key="BsLightBgSubtle" Color="#fcfcfd" />
+    <SolidColorBrush x:Key="BsDarkBgSubtle" Color="#ced4da" />
 
-		<SolidColorBrush x:Key="BsPrimaryBorderSubtle" Color="#9ec5fe" />
-		<SolidColorBrush x:Key="BsSecondaryBorderSubtle" Color="#c4c8cb" />
-		<SolidColorBrush x:Key="BsSuccessBorderSubtle" Color="#a3cfbb" />
-		<SolidColorBrush x:Key="BsInfoBorderSubtle" Color="#9eeaf9" />
-		<SolidColorBrush x:Key="BsWarningBorderSubtle" Color="#ffe69c" />
-		<SolidColorBrush x:Key="BsDangerBorderSubtle" Color="#f1aeb5" />
-		<SolidColorBrush x:Key="BsLightBorderSubtle" Color="#e9ecef" />
-		<SolidColorBrush x:Key="BsDarkBorderSubtle" Color="#adb5bd" />
+    <SolidColorBrush x:Key="BsPrimaryBorderSubtle" Color="#9ec5fe" />
+    <SolidColorBrush x:Key="BsSecondaryBorderSubtle" Color="#c4c8cb" />
+    <SolidColorBrush x:Key="BsSuccessBorderSubtle" Color="#a3cfbb" />
+    <SolidColorBrush x:Key="BsInfoBorderSubtle" Color="#9eeaf9" />
+    <SolidColorBrush x:Key="BsWarningBorderSubtle" Color="#ffe69c" />
+    <SolidColorBrush x:Key="BsDangerBorderSubtle" Color="#f1aeb5" />
+    <SolidColorBrush x:Key="BsLightBorderSubtle" Color="#e9ecef" />
+    <SolidColorBrush x:Key="BsDarkBorderSubtle" Color="#adb5bd" />
 
-		<FontFamily x:Key="BsFontSansSerif">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
-		<FontFamily x:Key="BsFontMonospace">"SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Monospace</FontFamily>
+    <FontFamily x:Key="BsFontSansSerif">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
+    <FontFamily x:Key="BsFontMonospace">"SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Monospace</FontFamily>
 
-		<SolidColorBrush x:Key="BsBodyColor" Color="#212529" />
-		<SolidColorBrush x:Key="BsBodyBg" Color="#ffffff" />
-		<FontFamily x:Key="BsBodyFontFamily">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
-		<system:Double x:Key="BsBodyFontSize">16</system:Double>
-		<FontWeight x:Key="BsBodyFontWeight">Normal</FontWeight>
-		<system:Double x:Key="BsBodyLineHeight">24</system:Double>
+    <FontFamily x:Key="BsBodyFontFamily">"Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, Sans-Serif</FontFamily>
+    <system:Double x:Key="BsBodyFontSize">14</system:Double>
+    <FontWeight x:Key="BsBodyFontWeight">Normal</FontWeight>
+    <system:Double x:Key="BsBodyLineHeight">24</system:Double>
 
-		<SolidColorBrush x:Key="BsEmphasisColor" Color="#000000" />
-		<SolidColorBrush x:Key="BsSecondaryColor" Color="#54595d" />
-		<SolidColorBrush x:Key="BsSecondaryBg" Color="#e9ecef" />
-		<SolidColorBrush x:Key="BsTertiaryColor" Color="#7f7f7f" />
-		<SolidColorBrush x:Key="BsTertiaryBg" Color="#f8f9fa" />
-		<SolidColorBrush x:Key="BsLinkColor" Color="#0d6efd" />
-		<SolidColorBrush x:Key="BsLinkHoverColor" Color="#0a58ca" />
-		<SolidColorBrush x:Key="BsCodeColor" Color="#d63384" />
-		<SolidColorBrush x:Key="BsHighlightColor" Color="#212529" />
-		<SolidColorBrush x:Key="BsHighlightBg" Color="#fff3cd" />
-		<SolidColorBrush x:Key="BsBorderColor" Color="#dee2e6" />
-		<SolidColorBrush x:Key="BsBorderColorTranslucent" Color="#2c2c2c2c" />
+    <SolidColorBrush x:Key="BsBodyColor" Color="#212529" />
+    <SolidColorBrush x:Key="BsBodyBg" Color="#ffffff" />
+    
+    <SolidColorBrush x:Key="BsSecondaryColor" Color="#54595d" />
+    <SolidColorBrush x:Key="BsSecondaryBg" Color="#e9ecef" />
+    
+    <SolidColorBrush x:Key="BsTertiaryColor" Color="#7f7f7f" />
+    <SolidColorBrush x:Key="BsTertiaryBg" Color="#f8f9fa" />
+    
+    <SolidColorBrush x:Key="BsLinkColor" Color="#0d6efd" />
+    <SolidColorBrush x:Key="BsLinkHoverColor" Color="#0a58ca" />
+    
+    <SolidColorBrush x:Key="BsCodeColor" Color="#d63384" />
+    
+    <SolidColorBrush x:Key="BsHighlightColor" Color="#212529" />
+    <SolidColorBrush x:Key="BsHighlightBg" Color="#fff3cd" />
+    
+    <SolidColorBrush x:Key="BsBorderColor" Color="#dee2e6" />
+    <SolidColorBrush x:Key="BsBorderColorTranslucent" Color="#2c2c2c2c" />
 
-		<Thickness x:Key="BsBorderWidth">1</Thickness>
-		<system:String x:Key="BsLinkDecoration">Underline</system:String>
+    <system:Double x:Key="BsFocusRingWidth">4</system:Double>
+    <SolidColorBrush x:Key="BsFocusRingColor" Color="#400d6efd" />
 
-		<CornerRadius x:Key="BsBorderRadius">6</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusSm">4</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusLg">8</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusXl">16</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusXxl">32</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadius2Xl">32</CornerRadius>
-		<CornerRadius x:Key="BsBorderRadiusPill">800</CornerRadius>
-
-		<DropShadowEffect x:Key="BsBoxShadow" BlurRadius="16" Color="#26000000" OffsetY="8" />
-		<DropShadowEffect x:Key="BsBoxShadowSm" BlurRadius="4" Color="#13000000" OffsetY="2" />
-		<DropShadowEffect x:Key="BsBoxShadowLg" BlurRadius="48" Color="#2c000000" OffsetY="16" />
-
-		<system:Double x:Key="BsFocusRingWidth">4</system:Double>
-		<SolidColorBrush x:Key="BsFocusRingColor" Color="#400d6efd" />
-
-		<SolidColorBrush x:Key="BsFormValidColor" Color="#198754" />
-		<SolidColorBrush x:Key="BsFormValidBorderColor" Color="#198754" />
-		<SolidColorBrush x:Key="BsFormInvalidColor" Color="#dc3545" />
-		<SolidColorBrush x:Key="BsFormInvalidBorderColor" Color="#dc3545" />
-	</Styles.Resources>
+    <SolidColorBrush x:Key="BsFormValidColor" Color="#198754" />
+    <SolidColorBrush x:Key="BsFormValidBorderColor" Color="#198754" />
+    <SolidColorBrush x:Key="BsFormInvalidColor" Color="#dc3545" />
+    <SolidColorBrush x:Key="BsFormInvalidBorderColor" Color="#dc3545" />
+  </Styles.Resources>
 	
-	
-	<Style Selector="Control.body.hr.h1.h2.h3.h4.h5.h6.p.strong.abbr.address.small.mark.sub.sup.a.code.kbd.pre.label.textarea.lead.display-1.display-2.display-3.display-4.display-5.display-6.blockquote.blockquote-footer.img-fluid.img-thumbnail.figure.figure-caption.container.container-fluid.form-label.form-control.form-control-sm.form-control-lg.form-select.form-check-input.form-switch.form-range.form-floating.input-group.input-group-text.input-group-sm.input-group-lg.btn.btn-primary .btn-secondary .btn-success .btn-danger .btn-warning .btn-info .btn-light .btn-dark .btn-link .btn-outline-primary .btn-outline-secondary .btn-outline-success .btn-outline-danger .btn-outline-warning .btn-outline-info .btn-outline-light .btn-outline-dark.btn-sm.btn-lg.btn-group.fade.show.card.card-header.card-body.card-title.card-subtitle.card-text.card-footer.text-bg-primary.text-bg-secondary.text-bg-success.text-bg-info.text-bg-warning.text-bg-danger.text-bg-light.text-bg-dark.link-primary.link-secondary.link-success.link-info.link-warning.link-danger.link-light.link-dark.align-self-top.align-self-middle.align-self-bottom.align-self-stretch.align-self-start.align-self-center.align-self-end.opacity-0.opacity-25.opacity-50.opacity-75.opacity-100.overflow-auto.overflow-hidden.overflow-scroll.overflow-x-auto.overflow-x-hidden.overflow-x-scroll.overflow-y-auto.overflow-y-hidden.overflow-y-scroll.border.border-primary.border-secondary.border-success.border-info.border-warning.border-danger.border-dark.border-black.border-white.font-monospace.fs-1.fs-2.fs-3.fs-4.fs-5.fs-6.fst-italic.fst-normal.fw-light.fw-normal.fw-medium.fw-semibold.fw-bold.lh-1.lh-sm.lh-base.lh-lg.text-start.text-center.text-end.text-uppercase.text-lowercase.text-capitalize.text-decoration-underline.text-decoration-line-through.text-wrap.text-nowrap.text-break.text-primary.text-secondary.text-muted.text-body-secondary.text-success.text-info.text-warning.text-danger.text-light.text-dark.text-black.text-white.text-black-50.text-white-50.bg-body.bg-body-secondary.bg-body-tertiary.bg-primary.bg-secondary.bg-success.bg-info.bg-warning.bg-danger.bg-light.bg-dark.bg-black.bg-white.bg-transparent.bg-primary-subtle.bg-success-subtle.bg-danger-subtle.bg-warning-subtle.bg-info-subtle.bg-dark-subtle.visible.invisible.z-n1.z-0.z-1.z-2.z-3.m-0.mt-0.mb-0.ms-0.me-0.mx-0.my-0.m-1.mt-1.mb-1.ms-1.me-1.mx-1.my-1.m-2.mt-2.mb-2.ms-2.me-2.mx-2.my-2.m-3.mt-3.mb-3.ms-3.me-3.mx-3.my-3.m-4.mt-4.mb-4.ms-4.me-4.mx-4.my-4.m-5.mt-5.mb-5.ms-5.me-5.mx-5.my-5.p-0.pt-0.pb-0.ps-0.pe-0.px-0.py-0.p-1.pt-1.pb-1.ps-1.pe-1.px-1.py-1.p-2.pt-2.pb-2.ps-2.pe-2.px-2.py-2.p-3.pt-3.pb-3.ps-3.pe-3.px-3.py-3.p-4.pt-4.pb-4.ps-4.pe-4.px-4.py-4.p-5.pt-5.pb-5.ps-5.pe-5.px-5.py-5.Border.border-0.border-1.border-2.border-3.border-4.border-5.border-top-0.border-top-1.border-top-2.border-top-3.border-top-4.border-top-5.border-bottom-0.border-bottom-1.border-bottom-2.border-bottom-3.border-bottom-4.border-bottom-5.border-start-0.border-start-1.border-start-2.border-start-3.border-start-4.border-start-5.border-end-0.border-end-1.border-end-2.border-end-3.border-end-4.border-end-5.rounded-0.rounded-1.rounded-2.rounded-3.rounded-4.rounded-5.rounded-pill.rounded-top-0.rounded-top-1.rounded-top-2.rounded-top-3.rounded-top-4.rounded-top-5.rounded-bottom-0.rounded-bottom-1.rounded-bottom-2.rounded-bottom-3.rounded-bottom-4.rounded-bottom-5.rounded-start-0.rounded-start-1.rounded-start-2.rounded-start-3.rounded-start-4.rounded-start-5.rounded-end-0.rounded-end-1.rounded-end-2.rounded-end-3.rounded-end-4.rounded-end-5"/>
+	<Style Selector="Control.body.hr.h1.h2.h3.h4.h5.h6.p.strong.abbr.address.small.mark.sub.sup.a.code.kbd.pre.label.textarea.lead.display-1.display-2.display-3.display-4.display-5.display-6.blockquote.blockquote-footer.img-fluid.img-thumbnail.figure.figure-caption.container.container-fluid.form-label.form-control.form-control-sm.form-control-lg.form-select.form-check-input.form-switch.form-range.form-floating.input-group.input-group-text.input-group-sm.input-group-lg.btn.btn-primary .btn-secondary .btn-success .btn-danger .btn-warning .btn-info .btn-light .btn-dark .btn-link .btn-outline-primary .btn-outline-secondary .btn-outline-success .btn-outline-danger .btn-outline-warning .btn-outline-info .btn-outline-light .btn-outline-dark.btn-sm.btn-lg.btn-group.fade.show.card.card-header.card-body.card-title.card-subtitle.card-text.card-footer.text-bg-primary.text-bg-secondary.text-bg-success.text-bg-info.text-bg-warning.text-bg-danger.text-bg-light.text-bg-dark.link-primary.link-secondary.link-success.link-info.link-warning.link-danger.link-light.link-dark.align-self-top.align-self-middle.align-self-bottom.align-self-stretch.align-self-start.align-self-center.align-self-end.opacity-0.opacity-25.opacity-50.opacity-75.opacity-100.overflow-auto.overflow-hidden.overflow-scroll.overflow-x-auto.overflow-x-hidden.overflow-x-scroll.overflow-y-auto.overflow-y-hidden.overflow-y-scroll.border.border-primary.border-secondary.border-success.border-info.border-warning.border-danger.border-dark.border-black.border-white.font-monospace.fs-1.fs-2.fs-3.fs-4.fs-5.fs-6.fst-italic.fst-normal.fw-light.fw-normal.fw-medium.fw-semibold.fw-bold.lh-1.lh-sm.lh-base.lh-lg.text-start.text-center.text-end.text-uppercase.text-lowercase.text-capitalize.text-decoration-underline.text-decoration-line-through.text-wrap.text-nowrap.text-break.text-truncate.text-primary.text-secondary.text-muted.text-body-secondary.text-success.text-info.text-warning.text-danger.text-light.text-dark.text-black.text-white.text-black-50.text-white-50.bg-body.bg-body-secondary.bg-body-tertiary.bg-primary.bg-secondary.bg-success.bg-info.bg-warning.bg-danger.bg-light.bg-dark.bg-black.bg-white.bg-transparent.bg-primary-subtle.bg-success-subtle.bg-danger-subtle.bg-warning-subtle.bg-info-subtle.bg-dark-subtle.visible.invisible.z-n1.z-0.z-1.z-2.z-3.m-0.mt-0.mb-0.ms-0.me-0.mx-0.my-0.m-1.mt-1.mb-1.ms-1.me-1.mx-1.my-1.m-2.mt-2.mb-2.ms-2.me-2.mx-2.my-2.m-3.mt-3.mb-3.ms-3.me-3.mx-3.my-3.m-4.mt-4.mb-4.ms-4.me-4.mx-4.my-4.m-5.mt-5.mb-5.ms-5.me-5.mx-5.my-5.p-0.pt-0.pb-0.ps-0.pe-0.px-0.py-0.p-1.pt-1.pb-1.ps-1.pe-1.px-1.py-1.p-2.pt-2.pb-2.ps-2.pe-2.px-2.py-2.p-3.pt-3.pb-3.ps-3.pe-3.px-3.py-3.p-4.pt-4.pb-4.ps-4.pe-4.px-4.py-4.p-5.pt-5.pb-5.ps-5.pe-5.px-5.py-5.Border.border-0.border-1.border-2.border-3.border-4.border-5.border-top-0.border-top-1.border-top-2.border-top-3.border-top-4.border-top-5.border-bottom-0.border-bottom-1.border-bottom-2.border-bottom-3.border-bottom-4.border-bottom-5.border-start-0.border-start-1.border-start-2.border-start-3.border-start-4.border-start-5.border-end-0.border-end-1.border-end-2.border-end-3.border-end-4.border-end-5.rounded-0.rounded-1.rounded-2.rounded-3.rounded-4.rounded-5.rounded-pill.rounded-top-0.rounded-top-1.rounded-top-2.rounded-top-3.rounded-top-4.rounded-top-5.rounded-bottom-0.rounded-bottom-1.rounded-bottom-2.rounded-bottom-3.rounded-bottom-4.rounded-bottom-5.rounded-start-0.rounded-start-1.rounded-start-2.rounded-start-3.rounded-start-4.rounded-start-5.rounded-end-0.rounded-end-1.rounded-end-2.rounded-end-3.rounded-end-4.rounded-end-5"/>
 </Styles>
