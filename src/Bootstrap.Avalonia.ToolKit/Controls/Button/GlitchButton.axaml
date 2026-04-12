@@ -1,0 +1,18 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Bootstrap.Avalonia.ToolKit.Controls.Buttons">
+    <Design.PreviewWith>
+        <controls:GlitchButton />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|GlitchButton">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
+                    <Button Content="GLITCH"/>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

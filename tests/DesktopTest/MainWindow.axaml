@@ -1,0 +1,124 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="763"
+        x:Class="DesktopTest.MainWindow"
+        Title="DesktopTest">
+
+    <Border Classes="bg-body">
+        <ScrollViewer>
+            <ListBox Classes="bg-transparent">
+                <ListBox.Styles>
+                    <Style Selector="ListBoxItem">
+                        <Setter Property="BorderBrush" Value="{DynamicResource BsBorder}"/>
+                        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Height" Value="126"/>
+                        <Setter Property="ClipToBounds" Value="True"/>
+                        <Setter Property="Transitions">
+                            <Transitions>
+                                <DoubleTransition Property="Height" Duration="0:0:0.55" Easing="CubicEaseOut"/>
+                                <BrushTransition Property="Background" Duration="0:0:0.2"/>
+                            </Transitions>
+                        </Setter>
+                    </Style>
+
+                    <Style Selector="ListBoxItem:pointerover">
+                        <Setter Property="Height" Value="245"/>
+                        <Setter Property="Background" Value="#1AFFFFFF"/> </Style>
+                    <Style Selector="ListBoxItem.product-design:pointerover/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource BsSuccess}"/>
+                    </Style>
+                    <Style Selector="ListBoxItem.ux-design:pointerover/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource BsInfo}"/>
+                    </Style>
+                    <Style Selector="ListBoxItem.dev:pointerover/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource BsWarning}"/>
+                    </Style>
+                    <Style Selector="ListBoxItem.quality-assurance:pointerover/template/ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource BsDanger}"/>
+                    </Style>
+                </ListBox.Styles>
+                <ListBoxItem Classes="product-design">
+                <Border Classes="py-5 ps-5">
+                    <Grid ColumnDefinitions="300, *">
+                        <TextBlock Grid.Column="0" Text=".01" Classes="font-monospace"/>
+                        <StackPanel Grid.Column="1" Spacing="12">
+                            <TextBlock Text="Product design" Classes="h2"/>
+                            <StackPanel Orientation="Horizontal" Classes="gap-2">
+                                <TextBlock Classes="small" Text="Saas Platform"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Web Platform"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Mobile App"/>
+                            </StackPanel>
+                            <TextBlock Text="By working hand in hand, we'll turn your ideas into real, market-ready products. With a focus on your unique needs, we'll blend aesthetics and usability. Let's chat about how we can bring your ideas to life." Classes="text-wrap"/>
+                            <Button Classes="btn btn-outline-light rounded-pill font-jetbrains-mono mt-2" Content="DISCUSS PROJECT"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                </ListBoxItem>
+                <ListBoxItem Classes="ux-design">
+                <Border Classes="py-5 ps-5">
+                    <Grid ColumnDefinitions="300, *">
+                        <TextBlock Grid.Column="0" Text=".02" Classes="font-monospace"/>
+                        <StackPanel Grid.Column="1" Spacing="12">
+                            <TextBlock Text="UX Design" Classes="h2"/>
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <TextBlock Classes="small" Text="UX Audit"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Analysis"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Research"/>
+                            </StackPanel>
+                            <TextBlock Text="We create visually compelling and user-friendly websites that reflect your brand's identity and engage your target audience. Our designs are tailored to provide seamless navigation and a memorable user experience." Classes="text-wrap"/>
+                            <Button Classes="btn btn-outline-light rounded-pill font-jetbrains-mono mt-2" Content="DISCUSS PROJECT"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                </ListBoxItem>
+                <ListBoxItem Classes="dev">
+                <Border Classes="py-5 ps-5">
+                    <Grid ColumnDefinitions="300, *">
+                        <TextBlock Grid.Column="0" Text=".03" Classes="font-monospace"/>
+                        <StackPanel Grid.Column="1" Spacing="12">
+                            <TextBlock Text="Development" Classes="h2"/>
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <TextBlock Classes="small" Text="Net Core"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="PHP"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="React"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Blazor"/>
+                            </StackPanel>
+                            <TextBlock Text="We create visually compelling and user-friendly websites that reflect your brand's identity and engage your target audience. Our designs are tailored to provide seamless navigation and a memorable user experience." Classes="text-wrap"/>
+                            <Button Classes="btn btn-outline-light rounded-pill font-jetbrains-mono mt-2" Content="DISCUSS PROJECT"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                </ListBoxItem>
+                <ListBoxItem Classes="quality-assurance">
+                <Border Classes="py-5 ps-5">
+                    <Grid ColumnDefinitions="300, *">
+                        <TextBlock Grid.Column="0" Text=".04" Classes="font-monospace"/>
+                        <StackPanel Grid.Column="1" Spacing="12">
+                            <TextBlock Text="Quality Assurance" Classes="h2"/>
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <TextBlock Classes="small" Text="Testing"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Planning, creating followings KPI's"/>
+                                <TextBlock Classes="small" Text="&#x2022;"/>
+                                <TextBlock Classes="small" Text="Documentations"/>
+                            </StackPanel>
+                            <TextBlock Text="We create visually compelling and user-friendly websites that reflect your brand's identity and engage your target audience. Our designs are tailored to provide seamless navigation and a memorable user experience." Classes="text-wrap"/>
+                            <Button Classes="btn btn-outline-light rounded-pill font-jetbrains-mono mt-2" Content="DISCUSS PROJECT"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                </ListBoxItem>
+            </ListBox>
+        </ScrollViewer>
+    </Border>
+</Window>

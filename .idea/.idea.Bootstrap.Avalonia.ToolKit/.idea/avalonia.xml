@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Controls/Button/Buttons.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Controls/Button/GlitchButton.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Controls/GlitchButton.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Styles/Bootstrap.Map.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Styles/Bootstrap.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Styles/Fonts.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="src/Bootstrap.Avalonia.ToolKit/Styles/Themes.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="tests/DesktopTest/App.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+        <entry key="tests/DesktopTest/MainWindow.axaml" value="tests/DesktopTest/DesktopTest.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,42 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+
+    
+    <SolidColorBrush x:Key="BsTransparent" Color="Transparent"/>
+    <!-- ===================== THEME FOUNDATION ===================== -->
+    <!-- Core base colors -->
+    <SolidColorBrush x:Key="BsBody" Color="#0d1117" />
+    <SolidColorBrush x:Key="BsBodySecondary" Color="#161b22" />
+    <SolidColorBrush x:Key="BsBodyTeritay" Color="#21262d" />
+
+    <!-- ===================== TYPOGRAPHY ===================== -->
+    <FontFamily x:Key="BsBodyFontFamily">
+        avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Inter/Inter-VariableFont_opsz,wght.ttf#Inter
+    </FontFamily>
+
+    <system:Double x:Key="BsBodyFontSize">15</system:Double>
+    <system:Double x:Key="BsBodyLineHeight">24</system:Double>
+    <FontWeight x:Key="BsBodyFontWeight">Normal</FontWeight>
+
+    <!-- ===================== TEXT COLORS ===================== -->
+    <SolidColorBrush x:Key="BsText" Color="#c9d1d9" />
+    <SolidColorBrush x:Key="BsMuted" Color="#8b949e" />
+    <SolidColorBrush x:Key="BsSubtle" Color="#6e7681" />
+
+    <!-- ===================== ACCENT COLORS ===================== -->
+    <SolidColorBrush x:Key="BsPrimary" Color="#0078D4" />
+    <SolidColorBrush x:Key="BsSecondary" Color="#94A3B8" />
+    <SolidColorBrush x:Key="BsSuccess" Color="#064E3B" /> 
+    <SolidColorBrush x:Key="BsInfo" Color="#1E3A8A" />
+    <SolidColorBrush x:Key="BsWarning" Color="#78350F" />
+    <SolidColorBrush x:Key="BsDanger" Color="#7F1D1D" />
+
+    <!-- ===================== NEUTRALS ===================== -->
+    <SolidColorBrush x:Key="BsLight" Color="#c9d1d9" />
+    <SolidColorBrush x:Key="BsDark" Color="#010409" />
+
+    <!-- ===================== BORDERS ===================== -->
+    <SolidColorBrush x:Key="BsBorder" Color="#30363d" />
+
+</ResourceDictionary>

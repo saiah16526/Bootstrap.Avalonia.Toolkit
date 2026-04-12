@@ -1,16 +1,40 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap.Avalonia.Toolkit", "Bootstrap.Avalonia.Toolkit\Bootstrap.Avalonia.Toolkit.csproj", "{6010E639-F554-4E13-811D-FC2CB14759B3}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D5B35089-3073-48FB-A85B-B01DFDD83977}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EB6F7DE2-534A-4683-98BB-23E1A45C6B7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global", "global", "{30A735FB-09F3-4080-8C69-D70E41EAE500}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootstrap.Avalonia.ToolKit", "src\Bootstrap.Avalonia.ToolKit\Bootstrap.Avalonia.ToolKit.csproj", "{444E7AA0-86F3-4BB8-AB68-FE96CA30267A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopTest", "tests\DesktopTest\DesktopTest.csproj", "{C4C8992B-2BFF-414C-8B77-B08D300BFF73}"
+	ProjectSection(ProjectDependencies) = postProject
+		{444E7AA0-86F3-4BB8-AB68-FE96CA30267A} = {444E7AA0-86F3-4BB8-AB68-FE96CA30267A}
+		{9ADC9174-D722-4A9F-9D9E-57EB2C859CED} = {9ADC9174-D722-4A9F-9D9E-57EB2C859CED}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{444E7AA0-86F3-4BB8-AB68-FE96CA30267A} = {D5B35089-3073-48FB-A85B-B01DFDD83977}
+		{C4C8992B-2BFF-414C-8B77-B08D300BFF73} = {EB6F7DE2-534A-4683-98BB-23E1A45C6B7A}
+	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6010E639-F554-4E13-811D-FC2CB14759B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6010E639-F554-4E13-811D-FC2CB14759B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6010E639-F554-4E13-811D-FC2CB14759B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6010E639-F554-4E13-811D-FC2CB14759B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444E7AA0-86F3-4BB8-AB68-FE96CA30267A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444E7AA0-86F3-4BB8-AB68-FE96CA30267A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444E7AA0-86F3-4BB8-AB68-FE96CA30267A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444E7AA0-86F3-4BB8-AB68-FE96CA30267A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C8992B-2BFF-414C-8B77-B08D300BFF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C8992B-2BFF-414C-8B77-B08D300BFF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C8992B-2BFF-414C-8B77-B08D300BFF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C8992B-2BFF-414C-8B77-B08D300BFF73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

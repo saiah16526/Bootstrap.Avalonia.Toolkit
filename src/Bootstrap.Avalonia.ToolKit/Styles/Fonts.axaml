@@ -1,0 +1,74 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Styles.Resources>
+        <FontFamily x:Key="FluentIconsLight">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Microsoft Fluent System Icons/FluentSystemIcons-Light.ttf#FluentSystemIcons-Light</FontFamily>
+        <FontFamily x:Key="FluentIconsRegular">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Microsoft Fluent System Icons/FluentSystemIcons-Regular.ttf#FluentSystemIcons-Regular</FontFamily>
+        <FontFamily x:Key="FluentIconsFilled">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Microsoft Fluent System Icons/FluentSystemIcons-Filled.ttf#FluentSystemIcons-Filled</FontFamily>
+
+        <FontFamily x:Key="FontAwesomeFreeRegular">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/fontawesome-free-7.2.0-desktop/Font Awesome 7 Free-Regular-400.otf#Font Awesome 7 Free</FontFamily>
+        <FontFamily x:Key="FontAwesomeFreeSolid">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/fontawesome-free-7.2.0-desktop/Font Awesome 7 Free-Solid-900.otf#Font Awesome 7 Free</FontFamily>
+        <FontFamily x:Key="FontAwesomeBrands">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/fontawesome-free-7.2.0-desktop/Font Awesome 7 Brands-Regular-400.otf#Font Awesome 7 Brands</FontFamily>
+
+        <FontFamily x:Key="MaterialSymbolsOutlined">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Google Material Design Icons/MaterialSymbolsOutlined.ttf#Material Symbols Outlined Medium</FontFamily>
+        <FontFamily x:Key="MaterialSymbolsRounded">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Google Material Design Icons/MaterialSymbolsRounded.ttf#Material Symbols Rounded Medium</FontFamily>
+        <FontFamily x:Key="MaterialSymbolsSharp">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Google Material Design Icons/MaterialSymbolsSharp.ttf#Material Symbols Sharp Medium</FontFamily>
+
+        <FontFamily x:Key="Inter">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Inter/Inter_18pt-Regular.ttf#Inter 18pt</FontFamily>
+        <FontFamily x:Key="InterTight">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Inter_Tight/InterTight-Medium.ttf#Inter Tight Medium</FontFamily>
+        <FontFamily x:Key="Roboto">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Roboto/Roboto-Regular.ttf#Roboto</FontFamily>
+        <FontFamily x:Key="JetBrainsMono">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/JetBrains_Mono/JetBrainsMono-Regular.ttf#JetBrains Mono</FontFamily>
+        <FontFamily x:Key="DancingScript">avares://Bootstrap.Avalonia.ToolKit/Assets/Fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf#Dancing Script</FontFamily>
+    </Styles.Resources>
+
+    <Style Selector=":is(Control).font-inter">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource Inter}" />
+    </Style>
+
+    <Style Selector=":is(Control).font-inter-tight">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource InterTight}" />
+    </Style>
+
+    <Style Selector=":is(Control).font-roboto">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource Roboto}" />
+    </Style>
+
+    <Style Selector=":is(Control).font-jetbrains-mono">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource JetBrainsMono}" />
+    </Style>
+
+    <Style Selector=":is(Control).font-cursive">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource DancingScript}" />
+    </Style>
+
+    <Style Selector="TextBlock.icon-fluent">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource FluentIconsRegular}" />
+    </Style>
+    <Style Selector="TextBlock.icon-fluent-light">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource FluentIconsLight}" />
+    </Style>
+    <Style Selector="TextBlock.icon-fluent-filled">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource FluentIconsFilled}" />
+    </Style>
+
+    <Style Selector="TextBlock.icon-fa-solid">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource FontAwesomeFreeSolid}" />
+    </Style>
+    <Style Selector="TextBlock.icon-fa-regular">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource FontAwesomeFreeRegular}" />
+    </Style>
+    <Style Selector="TextBlock.icon-fa-brand">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource FontAwesomeBrands}" />
+    </Style>
+
+    <Style Selector="TextBlock.icon-material-rounded">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource MaterialSymbolsRounded}" />
+    </Style>
+    <Style Selector="TextBlock.icon-material-outlined">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource MaterialSymbolsOutlined}" />
+    </Style>
+    <Style Selector="TextBlock.icon-material-sharp">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource MaterialSymbolsSharp}" />
+    </Style>
+
+</Styles>

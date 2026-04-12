@@ -1,0 +1,13 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DesktopTest.App"
+             RequestedThemeVariant="Default">
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="avares://Bootstrap.Avalonia.ToolKit/Styles/Bootstrap.axaml" />
+        <StyleInclude Source="avares://Bootstrap.Avalonia.ToolKit/Styles/Bootstrap.Map.axaml" />
+        <StyleInclude Source="avares://Bootstrap.Avalonia.ToolKit/Controls/Button/Buttons.axaml" />
+    </Application.Styles>
+</Application>
